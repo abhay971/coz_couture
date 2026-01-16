@@ -1,0 +1,648 @@
+@import "tailwindcss";
+
+/* ============================================
+   COZ COUTURE - Custom Theme Configuration
+   Brand Colors: Orange #F37E3A, Blue #288EC2, Green #6EBD49
+   ============================================ */
+
+@theme {
+  /* Brand Colors */
+  --color-coz-orange: #F37E3A;
+  --color-coz-blue: #288EC2;
+  --color-coz-green: #6EBD49;
+
+  /* Extended Brand Palette */
+  --color-coz-orange-light: #F9A66C;
+  --color-coz-orange-dark: #D85F1A;
+  --color-coz-blue-light: #5AB3E0;
+  --color-coz-blue-dark: #1A6A94;
+  --color-coz-green-light: #8FD46F;
+  --color-coz-green-dark: #4A9A2E;
+
+  /* Neutrals */
+  --color-coz-black: #0A0A0A;
+  --color-coz-charcoal: #1A1A1A;
+  --color-coz-dark: #2A2A2A;
+  --color-coz-gray: #666666;
+  --color-coz-gray-light: #999999;
+  --color-coz-silver: #CCCCCC;
+  --color-coz-light: #F5F5F5;
+  --color-coz-cream: #FDF8F4;
+  --color-coz-white: #FFFFFF;
+
+  /* Typography Scale - Fluid */
+  --font-size-display: clamp(4rem, 12vw, 10rem);
+  --font-size-hero: clamp(3rem, 8vw, 7rem);
+  --font-size-h1: clamp(2.5rem, 5vw, 4.5rem);
+  --font-size-h2: clamp(2rem, 4vw, 3.5rem);
+  --font-size-h3: clamp(1.5rem, 3vw, 2.5rem);
+  --font-size-h4: clamp(1.25rem, 2vw, 1.75rem);
+  --font-size-body-lg: clamp(1.125rem, 1.5vw, 1.375rem);
+  --font-size-body: clamp(1rem, 1.2vw, 1.125rem);
+  --font-size-small: clamp(0.875rem, 1vw, 1rem);
+  --font-size-xs: clamp(0.75rem, 0.9vw, 0.875rem);
+
+  /* Spacing */
+  --spacing-section: clamp(5rem, 12vh, 10rem);
+  --spacing-component: clamp(3rem, 6vh, 5rem);
+
+  /* Animation Easings */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-magnetic: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-index Scale */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal: 400;
+  --z-popover: 500;
+  --z-tooltip: 600;
+  --z-cursor: 9999;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+@layer base {
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjp-Ek-_EeA.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/spacegrotesk/v16/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7oUXskPMBBSSJLm2E.woff2') format('woff2');
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--color-coz-cream);
+    color: var(--color-coz-charcoal);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  ::selection {
+    background-color: var(--color-coz-orange);
+    color: var(--color-coz-white);
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* ============================================
+   CUSTOM CURSOR STYLES
+   ============================================ */
+@layer components {
+  @media (pointer: fine) {
+    * {
+      cursor: none !important;
+    }
+  }
+
+  .cursor-dot {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-coz-orange);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: var(--z-cursor);
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+  }
+
+  .cursor-dot.hovering {
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-coz-blue);
+  }
+
+  .cursor-outline {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--color-coz-orange);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: calc(var(--z-cursor) - 1);
+    transform: translate(-50%, -50%);
+    transition: width 0.3s var(--ease-out-expo), height 0.3s var(--ease-out-expo),
+                border-color 0.2s, opacity 0.2s;
+  }
+
+  .cursor-outline.hovering {
+    width: 60px;
+    height: 60px;
+    border-color: var(--color-coz-blue);
+  }
+
+  .cursor-outline.clicking {
+    width: 30px;
+    height: 30px;
+  }
+
+  .cursor-text {
+    position: fixed;
+    pointer-events: none;
+    z-index: var(--z-cursor);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-coz-white);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .cursor-text.visible {
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   TYPOGRAPHY UTILITIES
+   ============================================ */
+@layer utilities {
+  .text-display {
+    font-size: var(--font-size-display);
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+  }
+
+  .text-hero {
+    font-size: var(--font-size-hero);
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  .text-h1 {
+    font-size: var(--font-size-h1);
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  .text-h2 {
+    font-size: var(--font-size-h2);
+    font-weight: 500;
+    line-height: 1.15;
+  }
+
+  .text-h3 {
+    font-size: var(--font-size-h3);
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .text-h4 {
+    font-size: var(--font-size-h4);
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  .text-body-lg {
+    font-size: var(--font-size-body-lg);
+    line-height: 1.7;
+  }
+
+  .text-body {
+    font-size: var(--font-size-body);
+    line-height: 1.7;
+  }
+
+  .text-small {
+    font-size: var(--font-size-small);
+    line-height: 1.6;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-coz-orange), var(--color-coz-blue), var(--color-coz-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-orange {
+    background: linear-gradient(135deg, var(--color-coz-orange), var(--color-coz-orange-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* ============================================
+   ANIMATION UTILITIES
+   ============================================ */
+@layer utilities {
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .will-change-opacity {
+    will-change: opacity;
+  }
+
+  .gpu {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  /* Split text styles */
+  .split-char {
+    display: inline-block;
+    will-change: transform, opacity;
+  }
+
+  .split-word {
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  .split-word-inner {
+    display: inline-block;
+    will-change: transform;
+  }
+
+  .split-line {
+    display: block;
+    overflow: hidden;
+  }
+
+  .split-line-inner {
+    display: block;
+    will-change: transform;
+  }
+
+  /* Clip path utilities */
+  .clip-inset-0 {
+    clip-path: inset(0 0 0 0);
+  }
+
+  .clip-inset-top {
+    clip-path: inset(100% 0 0 0);
+  }
+
+  .clip-inset-bottom {
+    clip-path: inset(0 0 100% 0);
+  }
+
+  .clip-inset-left {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  .clip-inset-right {
+    clip-path: inset(0 0 0 100%);
+  }
+
+  /* Reveal animation states */
+  .reveal-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   BUTTON STYLES
+   ============================================ */
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 0;
+    transition: all 0.3s var(--ease-out-expo);
+  }
+
+  .btn-primary {
+    background-color: var(--color-coz-orange);
+    color: var(--color-coz-white);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-coz-orange-dark);
+  }
+
+  .btn-secondary {
+    background-color: var(--color-coz-charcoal);
+    color: var(--color-coz-white);
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--color-coz-black);
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--color-coz-charcoal);
+    color: var(--color-coz-charcoal);
+  }
+
+  .btn-outline:hover {
+    background-color: var(--color-coz-charcoal);
+    color: var(--color-coz-white);
+  }
+
+  .magnetic-wrap {
+    display: inline-flex;
+    position: relative;
+  }
+
+  .magnetic-area {
+    position: absolute;
+    inset: -40px;
+  }
+}
+
+/* ============================================
+   IMAGE REVEAL STYLES
+   ============================================ */
+@layer components {
+  .img-reveal {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .img-reveal::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-coz-charcoal);
+    transform-origin: right;
+    z-index: 1;
+  }
+
+  .img-reveal.revealed::after {
+    transform: scaleX(0);
+  }
+
+  .img-reveal img {
+    transform: scale(1.2);
+    transition: transform 1.2s var(--ease-out-expo);
+  }
+
+  .img-reveal.revealed img {
+    transform: scale(1);
+  }
+}
+
+/* ============================================
+   MARQUEE STYLES
+   ============================================ */
+@layer components {
+  .marquee {
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+  }
+
+  .marquee-content {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    animation: marquee 40s linear infinite;
+  }
+
+  .marquee:hover .marquee-content {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/* ============================================
+   FORM STYLES
+   ============================================ */
+@layer components {
+  .form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1rem;
+    font-family: inherit;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-coz-silver);
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  .form-input:focus {
+    border-color: var(--color-coz-orange);
+  }
+
+  .form-label {
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    font-size: 1rem;
+    color: var(--color-coz-gray);
+    pointer-events: none;
+    transition: all 0.3s var(--ease-out-expo);
+  }
+
+  .form-input:focus ~ .form-label,
+  .form-input:not(:placeholder-shown) ~ .form-label {
+    top: -0.75rem;
+    font-size: 0.75rem;
+    color: var(--color-coz-orange);
+  }
+
+  .form-textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+}
+
+/* ============================================
+   SECTION SPACING
+   ============================================ */
+@layer utilities {
+  .section-padding {
+    padding-top: var(--spacing-section);
+    padding-bottom: var(--spacing-section);
+  }
+
+  .section-padding-sm {
+    padding-top: var(--spacing-component);
+    padding-bottom: var(--spacing-component);
+  }
+
+  .container-padding {
+    padding-left: clamp(1.5rem, 5vw, 6rem);
+    padding-right: clamp(1.5rem, 5vw, 6rem);
+  }
+}
+
+/* ============================================
+   PRELOADER STYLES
+   ============================================ */
+@layer components {
+  .preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-coz-charcoal);
+  }
+
+  .preloader-logo {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 700;
+    color: var(--color-coz-white);
+    letter-spacing: -0.02em;
+  }
+
+  .preloader-progress {
+    width: 200px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-top: 2rem;
+    overflow: hidden;
+  }
+
+  .preloader-progress-bar {
+    height: 100%;
+    background-color: var(--color-coz-orange);
+    transform-origin: left;
+  }
+
+  .preloader-counter {
+    margin-top: 1rem;
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.875rem;
+    color: var(--color-coz-white);
+    letter-spacing: 0.1em;
+  }
+}
+
+/* ============================================
+   SCROLL PROGRESS
+   ============================================ */
+@layer components {
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: transparent;
+    z-index: var(--z-fixed);
+  }
+
+  .scroll-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-coz-orange), var(--color-coz-blue), var(--color-coz-green));
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+}
+
+/* ============================================
+   RESPONSIVE UTILITIES
+   ============================================ */
+@layer utilities {
+  @media (max-width: 768px) {
+    .mobile-hidden {
+      display: none !important;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .desktop-hidden {
+      display: none !important;
+    }
+  }
+}

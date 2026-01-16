@@ -124,7 +124,7 @@ export function Header() {
           </nav>
 
           {/* CTA Button - Desktop */}
-          <div className="hidden lg:block">
+          {/* <div className="hidden lg:block">
             <button
               onClick={() => scrollToSection('#contact')}
               onMouseEnter={() => setHovering(true)}
@@ -133,7 +133,7 @@ export function Header() {
             >
               Get in Touch
             </button>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <button

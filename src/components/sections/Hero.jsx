@@ -197,14 +197,14 @@ export function Hero() {
         <div className="space-y-2 mb-8">
           {/* Line 1 */}
           <div ref={line1Ref} className="overflow-hidden">
-            <h1 className="text-[clamp(1rem,3vw,1.5rem)] font-light tracking-[0.2em] text-white/70 uppercase">
+            <h1 className="text-sm md:text-base lg:text-lg font-light tracking-[0.2em] text-white/70 uppercase">
               {renderSplitText('The Art of')}
             </h1>
           </div>
 
           {/* Line 2 - Main */}
           <div ref={line2Ref} className="overflow-hidden">
-            <h1 className="text-[clamp(2rem,4.9vw,8rem)] font-bold leading-[0.85] tracking-[-0.03em] text-white uppercase mb-20">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-white uppercase mb-20">
               {renderSplitText('Textile Craftsmanship')}
             </h1>
           </div>

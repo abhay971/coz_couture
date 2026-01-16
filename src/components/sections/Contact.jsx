@@ -121,7 +121,7 @@ export function Contact() {
               </span>
 
               <div ref={headingRef} className="overflow-hidden mb-8">
-                <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-[1.1] tracking-[-0.02em] text-coz-charcoal">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
                   {renderSplitText('Start Your Journey With Us')}
                 </h2>
               </div>
@@ -143,7 +143,7 @@ export function Contact() {
                     onMouseEnter={() => setHovering(true)}
                     onMouseLeave={() => resetCursor()}
                   >
-                    hello@cozcouture.com
+                    contact@cozclub.com
                   </a>
                 </div>
 
@@ -152,19 +152,10 @@ export function Contact() {
                     Call Us
                   </span>
                   <p className="text-2xl font-bold text-coz-charcoal">
-                    +91 98XXX XXXXX
+                   +91 92741 66689
                   </p>
                 </div>
 
-                <div>
-                  <span className="text-xs font-bold tracking-[0.2em] text-coz-gray uppercase block mb-2">
-                    Visit Us
-                  </span>
-                  <p className="text-lg text-coz-gray">
-                    Mumbai, Maharashtra<br />
-                    India
-                  </p>
-                </div>
               </div>
             </div>
 
@@ -316,6 +307,7 @@ export function Contact() {
           </div>
         </div>
       </div>
+
     </section>
   )
 }

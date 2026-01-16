@@ -39,7 +39,7 @@ export function Categories() {
       }
 
       // Horizontal scroll animation
-      const horizontalScroll = gsap.to(horizontalRef.current, {
+      gsap.to(horizontalRef.current, {
         x: () => -getScrollDistance(),
         ease: 'none',
         scrollTrigger: {
@@ -57,22 +57,6 @@ export function Categories() {
         },
       })
 
-      // Parallax effect for each card image
-      const cards = horizontalRef.current?.querySelectorAll('.category-card')
-      cards?.forEach((card) => {
-        const image = card.querySelector('.card-image')
-        gsap.to(image, {
-          xPercent: -15,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: card,
-            containerAnimation: horizontalScroll,
-            start: 'left right',
-            end: 'right left',
-            scrub: 1,
-          },
-        })
-      })
 
       return () => {
         ScrollTrigger.getAll().forEach((t) => t.kill())
@@ -98,10 +82,10 @@ export function Categories() {
                 Our Categories
               </span>
               <div ref={headingRef}>
-                <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-[1.1] tracking-tight text-coz-charcoal">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
                   Explore Our
                   <br />
-                  <span className="text-coz-gray/50">Collections</span>
+                  <span className="text-coz-charcoal">Collections</span>
                 </h2>
               </div>
             </div>
@@ -246,16 +230,15 @@ function CategoryCard({ category, index }) {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="relative w-full h-full overflow-hidden rounded-xl bg-coz-charcoal">
+      <div className="relative w-full h-full overflow-hidden rounded-xl bg-coz-gray">
         {/* Image */}
-        <div className="absolute inset-0 overflow-hidden">
-          <img
-            ref={imageRef}
-            src={category.image}
-            alt={category.name}
-            className="card-image w-[115%] h-full object-cover opacity-90"
-          />
-        </div>
+        <img
+          ref={imageRef}
+          src={category.image}
+          alt={category.name}
+          className="card-image absolute inset-0 w-full h-full object-cover scale-105"
+        />
+
 
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />

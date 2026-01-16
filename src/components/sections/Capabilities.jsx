@@ -139,10 +139,10 @@ export function Capabilities() {
                 </span>
 
                 <div ref={headingRef} className="mb-8">
-                  <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-[1.05] tracking-tight text-coz-charcoal">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
                     Our
                     <br />
-                    <span className="text-coz-gray/50">Capabilities</span>
+                    <span className="text-coz-charcoal">Capabilities</span>
                   </h2>
                 </div>
 

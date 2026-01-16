@@ -112,7 +112,7 @@ export function About() {
 
             {/* Heading */}
             <div className="overflow-hidden mb-8">
-              <h2 ref={headingRef} className="text-[clamp(2rem,4vw,3.5rem)] font-bold leading-[1.1] tracking-tight text-coz-charcoal">
+              <h2 ref={headingRef} className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
                 Where Tradition 
                 <br />
                 Meets Tomorrow

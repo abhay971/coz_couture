@@ -4,7 +4,7 @@ export const categories = [
     name: 'Fabrics & Textiles',
     slug: 'fabrics-textiles',
     description: 'Premium linen, silk, cotton, wool, and technical blends from India\'s finest mills.',
-    image: 'https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1558171813-4c088753af8f?w=1600&q=80',
     color: '#F37E3A',
     details: [
       'Linen & linen blends',
@@ -17,7 +17,7 @@ export const categories = [
     name: 'Handloom & Heritage',
     slug: 'handloom-heritage',
     description: 'Traditional weaves preserving centuries of Indian craftsmanship.',
-    image: 'https://images.unsplash.com/photo-1606722590583-6951b5ea92ad?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?w=1600&q=80',
     color: '#288EC2',
     details: [
       'Banarasi brocades',
@@ -31,7 +31,7 @@ export const categories = [
     subtitle: 'Prints & Dyes',
     slug: 'surface-design',
     description: 'Artisanal prints and natural dyes from master craftsmen.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1604076913837-52ab5629fba9?w=1600&q=80',
     color: '#6EBD49',
     details: [
       'Block printing',
@@ -44,7 +44,7 @@ export const categories = [
     name: "Women's Wear",
     slug: 'womens-wear',
     description: 'Indo-Western, Indian, and Arabian styles for the modern woman.',
-    image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=1600&q=80',
     color: '#F37E3A',
     details: [
       'Sarees & lehengas',
@@ -57,7 +57,7 @@ export const categories = [
     name: "Men's Wear",
     slug: 'mens-wear',
     description: 'Contemporary and ethnic menswear for every occasion.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1617137968427-85924c800a22?w=1600&q=80',
     color: '#288EC2',
     details: [
       'Shirts & trousers',
@@ -70,7 +70,7 @@ export const categories = [
     name: 'Kids Wear',
     slug: 'kids-wear',
     description: 'Comfort-first designs with gentle finishes for little ones.',
-    image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?w=1600&q=80',
     color: '#6EBD49',
     details: [
       'Soft cotton basics',
@@ -83,7 +83,7 @@ export const categories = [
     name: 'Knitwear & Athleisure',
     slug: 'knitwear-athleisure',
     description: 'Performance knits and loungewear for active lifestyles.',
-    image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1556906781-9a412961c28c?w=1600&q=80',
     color: '#F37E3A',
     details: [
       'T-shirts & polos',
@@ -96,7 +96,7 @@ export const categories = [
     name: 'Accessories',
     slug: 'accessories',
     description: 'Soft accessories and artisanal trims to complete any look.',
-    image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=1600&q=80',
     color: '#288EC2',
     details: [
       'Scarves & stoles',
@@ -109,7 +109,7 @@ export const categories = [
     name: 'Bags & Footwear',
     slug: 'bags-footwear',
     description: 'Leather goods and heritage footwear crafted with precision.',
-    image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=1600&q=80',
     color: '#6EBD49',
     details: [
       'Leather bags',
@@ -122,7 +122,7 @@ export const categories = [
     name: 'Home & Living',
     slug: 'home-living',
     description: 'Textiles that transform spaces with warmth and character.',
-    image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1600&q=80',
     color: '#F37E3A',
     details: [
       'Bed linen',
@@ -135,7 +135,7 @@ export const categories = [
     name: 'Technical Textiles',
     slug: 'technical-textiles',
     description: 'Industrial-grade textiles for specialized applications.',
-    image: 'https://images.unsplash.com/photo-1565791380713-1756b9a05343?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80',
     color: '#288EC2',
     details: [
       'Agrotech',

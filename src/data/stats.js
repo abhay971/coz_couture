@@ -74,29 +74,54 @@ export const processSteps = [
     number: '01',
     title: 'Inquiry',
     description: 'Submit your requirements and specifications',
+    highlights: [
+      'Quick response within 24 hours',
+      'Detailed requirement analysis',
+      'No-obligation consultation',
+    ],
   },
   {
     id: 2,
     number: '02',
     title: 'Consultation',
     description: 'Expert guidance and sampling options',
+    highlights: [
+      'One-on-one expert sessions',
+      'Material recommendations',
+      'Sample development options',
+    ],
   },
   {
     id: 3,
     number: '03',
     title: 'Sourcing',
     description: 'Connecting with verified craftsmen',
+    highlights: [
+      'Vetted artisan network',
+      'Ethical sourcing practices',
+      'Best price negotiations',
+    ],
   },
   {
     id: 4,
     number: '04',
     title: 'Production',
     description: 'Quality-controlled manufacturing',
+    highlights: [
+      'Multi-stage quality checks',
+      'Real-time progress updates',
+      'Compliance guaranteed',
+    ],
   },
   {
     id: 5,
     number: '05',
     title: 'Delivery',
     description: 'Global logistics and support',
+    highlights: [
+      'Worldwide shipping network',
+      'End-to-end tracking',
+      'After-sales support',
+    ],
   },
 ]

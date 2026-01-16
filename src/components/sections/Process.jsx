@@ -107,10 +107,10 @@ export function Process() {
                 How We Work
               </span>
               <div ref={headingRef} className="overflow-hidden">
-                <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-[1.1] tracking-[-0.02em] text-coz-charcoal">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
                   {renderSplitText('From Vision')}
                   <br />
-                  <span className="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-[1.1] tracking-[-0.02em] text-coz-charcoal">
+                  <span className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
                     {renderSplitText('To Reality')}
                   </span>
                 </h2>

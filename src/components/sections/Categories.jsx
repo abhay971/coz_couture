@@ -86,10 +86,10 @@ export function Categories() {
     <section
       id="categories"
       ref={sectionRef}
-      className="relative bg-white overflow-hidden"
+      className="relative bg-coz-cream overflow-hidden"
     >
       {/* Header Section */}
-      <div className="relative z-20 pt-32 pb-20">
+      <div className="relative z-20 pt-22">
         <div className="container-padding">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-12">
             {/* Left - Heading */}
@@ -143,9 +143,9 @@ export function Categories() {
       </div>
 
       {/* Bottom Section */}
-      <div className="relative z-20 py-20 bg-coz-cream">
+      <div className="relative z-20 bg-coz-cream">
         <div className="container-padding text-center">
-          <p className="text-coz-gray text-sm tracking-wider uppercase mb-8">
+          <p className="text-coz-gray text-sm tracking-wider uppercase mb-4">
             Can&apos;t find what you&apos;re looking for?
           </p>
           <button

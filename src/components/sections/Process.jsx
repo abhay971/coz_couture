@@ -116,12 +116,12 @@ export function Process() {
                 </h2>
               </div>
             </div>
-            <div className="flex items-end">
+            {/* <div className="flex items-end">
               <p className="text-xl text-coz-gray leading-relaxed">
                 One accountable partner for your entire journey. We guide you through
                 every step with transparency, expertise, and unwavering commitment to quality.
               </p>
-            </div>
+            </div> */}
           </div>
 
           {/* Process Steps */}

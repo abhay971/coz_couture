@@ -126,7 +126,7 @@ export function Capabilities() {
     <section
       id="capabilities"
       ref={sectionRef}
-      className="relative bg-white overflow-hidden"
+      className="relative bg-coz-cream overflow-hidden"
     >
       <div className="relative z-10 section-padding">
         <div className="container-padding">
@@ -154,7 +154,7 @@ export function Capabilities() {
                 {/* Active Capability Card */}
                 <div
                   ref={cardRef}
-                  className="hidden lg:block p-8 bg-coz-cream border border-coz-silver/30 rounded-lg"
+                  className="hidden lg:block p-8 bg-white border border-coz-silver/30 rounded-lg"
                 >
                   <div className="card-content">
                     <div className="w-14 h-14 rounded-lg bg-coz-orange flex items-center justify-center mb-6">
@@ -249,7 +249,7 @@ function CapabilityItem({ capability, index, isActive, onHover }) {
     <div
       ref={itemRef}
       className={`cap-item relative pl-8 py-6 cursor-pointer transition-colors duration-300 ${
-        isActive ? 'bg-coz-cream/50' : 'hover:bg-coz-cream/30'
+        isActive ? 'bg-white/50' : 'hover:bg-white/30'
       }`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}

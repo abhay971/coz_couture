@@ -98,7 +98,7 @@ export function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="relative bg-white overflow-hidden"
+      className="relative bg-coz-cream overflow-hidden"
     >
       {/* Main Content */}
       <div className="section-padding container-padding">

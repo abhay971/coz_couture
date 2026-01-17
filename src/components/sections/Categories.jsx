@@ -94,11 +94,11 @@ export function Categories() {
             <div className="flex items-center gap-6">
               <div className="text-right">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-6xl lg:text-7xl font-light text-coz-charcoal tabular-nums">
+                  <span className="text-4xl sm:text-5xl lg:text-7xl font-light text-coz-charcoal tabular-nums">
                     {String(activeIndex + 1).padStart(2, '0')}
                   </span>
-                  <span className="text-xl text-coz-gray/30">/</span>
-                  <span className="text-xl text-coz-gray/30">
+                  <span className="text-lg sm:text-xl text-coz-gray/30">/</span>
+                  <span className="text-lg sm:text-xl text-coz-gray/30">
                     {String(categories.length).padStart(2, '0')}
                   </span>
                 </div>
@@ -134,15 +134,15 @@ export function Categories() {
           </p>
           <button
             onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="group inline-flex items-center gap-4"
+            className="group inline-flex items-center gap-3 sm:gap-4"
           >
-            <span className="text-xl lg:text-2xl font-medium text-coz-charcoal group-hover:text-coz-orange transition-colors duration-500">
+            <span className="text-base sm:text-xl lg:text-2xl font-medium text-coz-charcoal group-hover:text-coz-orange transition-colors duration-500">
               Let&apos;s discuss your requirements
             </span>
-            <span className="relative w-14 h-14 rounded-full border border-coz-charcoal/20 flex items-center justify-center overflow-hidden group-hover:border-coz-orange transition-colors duration-500">
+            <span className="relative w-10 h-10 sm:w-14 sm:h-14 rounded-full border border-coz-charcoal/20 flex items-center justify-center overflow-hidden group-hover:border-coz-orange transition-colors duration-500">
               <span className="absolute inset-0 bg-coz-orange scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full" />
               <svg
-                className="w-5 h-5 text-coz-charcoal group-hover:text-white relative z-10 group-hover:translate-x-1 transition-all duration-300"
+                className="w-4 h-4 sm:w-5 sm:h-5 text-coz-charcoal group-hover:text-white relative z-10 group-hover:translate-x-1 transition-all duration-300"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

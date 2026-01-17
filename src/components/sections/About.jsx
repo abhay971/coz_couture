@@ -142,18 +142,18 @@ export function About() {
             </div>
 
             {/* Stats */}
-            <div ref={statsRef} className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-coz-silver/50">
-              <div className="stat-item">
-                <span className="text-3xl lg:text-4xl font-bold text-coz-orange">15+</span>
-                <p className="text-sm text-coz-gray mt-1">Years of Craft</p>
+            <div ref={statsRef} className="grid grid-cols-3 gap-4 sm:gap-8 mt-10 md:mt-12 pt-6 md:pt-8 border-t border-coz-silver/50">
+              <div className="stat-item text-center sm:text-left">
+                <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-coz-orange">15+</span>
+                <p className="text-xs sm:text-sm text-coz-gray mt-1">Years of Craft</p>
               </div>
-              <div className="stat-item">
-                <span className="text-3xl lg:text-4xl font-bold text-coz-blue">500+</span>
-                <p className="text-sm text-coz-gray mt-1">Artisan Networks</p>
+              <div className="stat-item text-center sm:text-left">
+                <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-coz-blue">500+</span>
+                <p className="text-xs sm:text-sm text-coz-gray mt-1">Artisan Networks</p>
               </div>
-              <div className="stat-item">
-                <span className="text-3xl lg:text-4xl font-bold text-coz-green">25+</span>
-                <p className="text-sm text-coz-gray mt-1">Countries Reached</p>
+              <div className="stat-item text-center sm:text-left">
+                <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-coz-green">25+</span>
+                <p className="text-xs sm:text-sm text-coz-gray mt-1">Countries Reached</p>
               </div>
             </div>
           </div>
@@ -172,12 +172,12 @@ export function About() {
             </div>
 
             {/* Floating Quote */}
-            <div className="absolute -bottom-8 -left-8 lg:-left-12 bg-coz-charcoal text-white p-6 lg:p-8 rounded-lg max-w-xs">
+            <div className="relative lg:absolute lg:-bottom-8 lg:-left-12 mt-6 lg:mt-0 bg-coz-charcoal text-white p-5 sm:p-6 lg:p-8 rounded-lg max-w-xs mx-auto lg:mx-0">
               <p className="text-sm lg:text-base italic leading-relaxed">
                 "We don't just deliver textiles. We deliver trust."
               </p>
-              <div className="mt-4 flex items-center gap-3">
-                <div className="w-10 h-0.5 bg-coz-orange" />
+              <div className="mt-3 lg:mt-4 flex items-center gap-3">
+                <div className="w-8 lg:w-10 h-0.5 bg-coz-orange" />
                 <span className="text-xs text-white/60 uppercase tracking-wider">Our Promise</span>
               </div>
             </div>

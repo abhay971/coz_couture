@@ -56,12 +56,12 @@ export function Header() {
             <img
               src="/logo/COZ_COUTURE_White.png"
               alt="COZ COUTURE Logo"
-              className="h-12 w-auto"
+              className="h-8 sm:h-10 md:h-12 w-auto object-contain"
               data-cursor-protect
             />
-            <span className="font-bold text-white mt-1 tracking-wide">
-                CLUB of Lifestyle Products
-              </span>
+            <span className="block text-[10px] sm:text-xs font-medium text-white/80 mt-1 tracking-wide">
+              CLUB of Lifestyle Products
+            </span>
           </a>
 
           {/* Mobile Menu Button - Hero */}
@@ -99,12 +99,12 @@ export function Header() {
             <img
               src="/logo/COZ_COUTURE.png"
               alt="COZ COUTURE Logo"
-              className="h-12 w-auto transition-opacity duration-500"
+              className="h-8 sm:h-10 md:h-12 w-auto object-contain transition-opacity duration-500"
               data-cursor-protect
             />
-            <span className="font-bold text-gray-900 mt-1 tracking-wide">
-                CLUB of Lifestyle Products
-              </span>
+            <span className="block text-[10px] sm:text-xs font-medium text-gray-600 mt-1 tracking-wide">
+              CLUB of Lifestyle Products
+            </span>
           </a>
 
           {/* Desktop Navigation */}
@@ -176,6 +176,22 @@ export function Header() {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-99 bg-coz-cream lg:hidden"
           >
+            {/* Close Button */}
+            <motion.button
+              initial={{ opacity: 0, rotate: -90 }}
+              animate={{ opacity: 1, rotate: 0 }}
+              exit={{ opacity: 0, rotate: 90 }}
+              transition={{ duration: 0.3 }}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="absolute top-6 right-6 w-12 h-12 flex items-center justify-center z-10"
+              aria-label="Close menu"
+            >
+              <div className="relative w-6 h-6">
+                <span className="absolute top-1/2 left-0 w-6 h-0.5 bg-coz-charcoal transform -translate-y-1/2 rotate-45" />
+                <span className="absolute top-1/2 left-0 w-6 h-0.5 bg-coz-charcoal transform -translate-y-1/2 -rotate-45" />
+              </div>
+            </motion.button>
+
             <nav className="flex flex-col items-center justify-center h-full gap-8">
               {navLinks.map((link, index) => (
                 <motion.button

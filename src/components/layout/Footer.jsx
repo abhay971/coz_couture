@@ -67,20 +67,20 @@ export function Footer() {
 
       {/* Marquee CTA Section */}
       <div ref={marqueeRef} className="border-b border-white/10">
-        <div className="relative py-16 lg:py-24">
+        <div className="relative py-10 sm:py-16 lg:py-24">
           {/* Marquee Background - Behind */}
           <div className="absolute inset-0 overflow-hidden flex items-center">
             <div className="marquee-track flex whitespace-nowrap">
               {[...Array(4)].map((_, i) => (
                 <div key={i} className="flex items-center shrink-0">
-                  <span className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-transparent stroke-text uppercase tracking-tight px-8">
+                  <span className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-transparent stroke-text uppercase tracking-tight px-4 sm:px-8">
                     Let's Create Together
                   </span>
-                  <span className="w-4 h-4 rounded-full bg-coz-orange mx-8" />
-                  <span className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-transparent stroke-text uppercase tracking-tight px-8">
+                  <span className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-coz-orange mx-4 sm:mx-8" />
+                  <span className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-transparent stroke-text uppercase tracking-tight px-4 sm:px-8">
                     Have a Project?
                   </span>
-                  <span className="w-4 h-4 rounded-full bg-coz-blue mx-8" />
+                  <span className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-coz-blue mx-4 sm:mx-8" />
                 </div>
               ))}
             </div>
@@ -120,13 +120,13 @@ export function Footer() {
       {/* Main Footer Content */}
       <div className="relative py-16 lg:py-20">
         <div className="container-padding">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+          <div className="flex flex-col md:flex-row justify-between gap-12 lg:gap-16">
             {/* Brand Section */}
-            <div className="footer-reveal">
+            <div className="md:max-w-xs footer-reveal text-center md:text-left">
               <img
                 src="/logo/COZ_COUTURE_White.png"
                 alt="COZ COUTURE"
-                className="h-12 w-auto mb-3"
+                className="h-12 w-auto mb-3 mx-auto md:mx-0"
               />
               <p className="text-white/70 text-sm font-medium tracking-wider uppercase mb-6">
                 CLUB of Lifestyle Products
@@ -134,7 +134,7 @@ export function Footer() {
 
 
               {/* Social Links */}
-              <div className="flex gap-3">
+              <div className="flex gap-3 justify-center md:justify-start">
                 {socialLinks.map((social) => (
                   <a
                     key={social.id}
@@ -153,11 +153,11 @@ export function Footer() {
             </div>
 
             {/* Navigation Links */}
-            <div className="footer-reveal">
+            <div className="footer-reveal text-center md:text-left">
               <h4 className="text-xs font-bold tracking-[0.25em] text-coz-orange uppercase mb-6">
                 Navigation
               </h4>
-              <ul className="space-y-3">
+              <ul className="space-y-3 inline-flex flex-col items-center md:items-start">
                 {navLinks.map((link) => (
                   <li key={link.id}>
                     <button
@@ -175,11 +175,11 @@ export function Footer() {
             </div>
 
             {/* Services */}
-            <div className="footer-reveal">
+            <div className="footer-reveal text-center md:text-left">
               <h4 className="text-xs font-bold tracking-[0.25em] text-coz-orange uppercase mb-6">
                 Services
               </h4>
-              <ul className="space-y-3">
+              <ul className="space-y-3 inline-flex flex-col items-center md:items-start">
                 <li>
                   <button
                     onClick={() => scrollToSection('#capabilities')}
@@ -269,7 +269,7 @@ export function Footer() {
               </div>
               <p className="text-white/70 text-sm leading-relaxed">
                 5 Laxmi Soc, OP Road,<br />
-                Vadodara - 07, Gujarat, INDIA.
+                Vadodara - 390007, Gujarat, INDIA.
               </p>
             </div>
 

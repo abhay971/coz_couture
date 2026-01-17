@@ -139,7 +139,7 @@ export function Contact() {
                   </span>
                   <a
                     href="mailto:hello@cozcouture.com"
-                    className="text-2xl font-bold text-coz-charcoal hover:text-coz-orange transition-colors"
+                    className="text-lg sm:text-xl md:text-2xl font-bold text-coz-charcoal hover:text-coz-orange transition-colors break-all sm:break-normal"
                     onMouseEnter={() => setHovering(true)}
                     onMouseLeave={() => resetCursor()}
                   >
@@ -151,7 +151,7 @@ export function Contact() {
                   <span className="text-xs font-bold tracking-[0.2em] text-coz-gray uppercase block mb-2">
                     Call Us
                   </span>
-                  <p className="text-2xl font-bold text-coz-charcoal">
+                  <p className="text-lg sm:text-xl md:text-2xl font-bold text-coz-charcoal">
                    +91 92741 66689
                   </p>
                 </div>
@@ -161,7 +161,7 @@ export function Contact() {
 
             {/* Right - Form */}
             <div className="lg:pl-12 lg:py-8">
-              <div className="bg-white p-8 md:p-12 shadow-2xl">
+              <div className="bg-white p-5 sm:p-8 md:p-12 shadow-2xl">
                 {isSubmitted ? (
                   <div className="text-center py-16">
                     <div className="w-20 h-20 bg-coz-green rounded-full flex items-center justify-center mx-auto mb-6">

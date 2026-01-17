@@ -197,17 +197,17 @@ export function Capabilities() {
               </div>
 
               {/* CTA */}
-              <div className="mt-16 pl-8">
-                <p className="text-coz-gray/60 text-sm mb-4">Need something specific?</p>
+              <div className="mt-10 sm:mt-16 pl-4 sm:pl-8">
+                <p className="text-coz-gray/60 text-xs sm:text-sm mb-3 sm:mb-4">Need something specific?</p>
                 <button
                   onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="group inline-flex items-center gap-4"
+                  className="group inline-flex items-center gap-3 sm:gap-4"
                 >
-                  <span className="text-lg font-medium text-coz-charcoal group-hover:text-coz-orange transition-colors duration-300">
+                  <span className="text-sm sm:text-lg font-medium text-coz-charcoal group-hover:text-coz-orange transition-colors duration-300">
                     Let&apos;s discuss your requirements
                   </span>
-                  <span className="w-10 h-10 rounded-full border border-coz-charcoal/20 flex items-center justify-center group-hover:bg-coz-orange group-hover:border-coz-orange transition-all duration-300">
-                    <svg className="w-4 h-4 text-coz-charcoal group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <span className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-coz-charcoal/20 flex items-center justify-center group-hover:bg-coz-orange group-hover:border-coz-orange transition-all duration-300">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 text-coz-charcoal group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </span>
@@ -248,7 +248,7 @@ function CapabilityItem({ capability, index, isActive, onHover }) {
   return (
     <div
       ref={itemRef}
-      className={`cap-item relative pl-8 py-6 cursor-pointer transition-colors duration-300 ${
+      className={`cap-item relative pl-4 sm:pl-8 py-4 sm:py-6 cursor-pointer transition-colors duration-300 ${
         isActive ? 'bg-white/50' : 'hover:bg-white/30'
       }`}
       onMouseEnter={handleMouseEnter}
@@ -262,9 +262,9 @@ function CapabilityItem({ capability, index, isActive, onHover }) {
       />
 
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-3 sm:gap-6">
           <span
-            className={`text-4xl lg:text-5xl font-light tabular-nums transition-colors duration-300 ${
+            className={`text-2xl sm:text-4xl lg:text-5xl font-light tabular-nums transition-colors duration-300 ${
               isActive ? 'text-coz-orange' : 'text-coz-silver'
             }`}
           >
@@ -272,7 +272,7 @@ function CapabilityItem({ capability, index, isActive, onHover }) {
           </span>
           <div>
             <h3
-              className={`text-xl lg:text-2xl font-semibold transition-colors duration-300 ${
+              className={`text-sm sm:text-xl lg:text-2xl font-semibold transition-colors duration-300 ${
                 isActive ? 'text-coz-charcoal' : 'text-coz-gray'
               }`}
             >
@@ -289,11 +289,11 @@ function CapabilityItem({ capability, index, isActive, onHover }) {
 
         {/* Arrow */}
         <div
-          className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
+          className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
             isActive ? 'bg-coz-orange scale-100' : 'bg-coz-silver/20 scale-75 opacity-0'
           }`}
         >
-          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-3 h-3 sm:w-4 sm:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>
         </div>

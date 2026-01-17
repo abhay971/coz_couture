@@ -101,18 +101,18 @@ export function Preloader() {
       {/* Content */}
       <div className="relative z-10 text-center">
         {/* Logo Image */}
-        <div ref={logoRef} className="mb-8">
+        <div ref={logoRef} className="mb-6 md:mb-8 px-8">
           <img
             src="/logo/COZ_COUTURE_White.png"
             alt="COZ COUTURE"
-            className="h-20 md:h-28 lg:h-32 w-auto mx-auto"
+            className="h-12 sm:h-16 md:h-24 lg:h-28 w-auto max-w-[280px] sm:max-w-none mx-auto object-contain"
           />
         </div>
 
         {/* Tagline */}
-        <div ref={wordsRef} className="flex items-center justify-center gap-3 mb-12">
+        <div ref={wordsRef} className="flex items-center justify-center gap-3 mb-10 md:mb-12 px-4">
           <span className="overflow-hidden">
-            <span className="word inline-block text-2xl font-medium tracking-[0.2em] uppercase text-white/60">
+            <span className="word inline-block text-xs sm:text-sm md:text-base lg:text-lg font-medium tracking-[0.15em] md:tracking-[0.2em] uppercase text-white/60">
               CLUB of Lifestyle Products
             </span>
           </span>

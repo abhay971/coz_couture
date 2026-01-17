@@ -204,8 +204,12 @@ export function Hero() {
 
           {/* Line 2 - Main */}
           <div ref={line2Ref} className="overflow-hidden">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-white uppercase mb-20">
-              {renderSplitText('Textile Craftsmanship')}
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-white uppercase mb-8 md:mb-20">
+              {/* Mobile: Two lines */}
+              <span className="block md:hidden">{renderSplitText('Textile')}</span>
+              <span className="block md:hidden">{renderSplitText('Craftsmanship')}</span>
+              {/* Desktop: One line */}
+              <span className="hidden md:block">{renderSplitText('Textile Craftsmanship')}</span>
             </h1>
           </div>
 
@@ -214,10 +218,11 @@ export function Hero() {
         </div>
 
         {/* Description */}
-        <div ref={descRef} className="max-w-7xl mx-auto" style={{ opacity: 0 }}>
-          <p className="text-lg md:text-xl text-white/80 font-light leading-relaxed mb-10">
+        <div ref={descRef} className="max-w-6xl mx-auto px-4 md:px-0" style={{ opacity: 0 }}>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 font-light leading-relaxed mb-8 md:mb-10">
             We bridge centuries of artisanal craftsmanship with modern global markets.
-            <br />
+            <span className="hidden sm:inline"><br /></span>
+            <span className="sm:hidden"> </span>
             From the handlooms of Varanasi to the mills of Surat, we curate India&apos;s finest
             textiles for discerning brands worldwide.
           </p>
@@ -227,14 +232,14 @@ export function Hero() {
             onClick={scrollToCategories}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
-            className="group inline-flex items-center gap-4 text-white"
+            className="group inline-flex items-center gap-3 md:gap-4 text-white"
           >
-            <span className="text-sm font-medium tracking-[0.2em] uppercase">
+            <span className="text-xs md:text-sm font-medium tracking-[0.15em] md:tracking-[0.2em] uppercase">
               Discover Our World
             </span>
-            <span className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-500">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-500">
               <svg
-                className="w-5 h-5 group-hover:text-black transition-colors duration-500 rotate-90"
+                className="w-4 h-4 md:w-5 md:h-5 group-hover:text-black transition-colors duration-500 rotate-90"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -252,11 +257,11 @@ export function Hero() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="absolute bottom-0 left-0 right-0 z-30 py-6 container-padding">
-        <div className="flex items-center justify-between text-white/40 text-xs tracking-wider uppercase">
-          <span>CLUB of Lifestyle Products</span>
+      <div className="absolute bottom-0 left-0 right-0 z-30 py-4 md:py-6 container-padding">
+        <div className="flex items-center justify-center md:justify-between text-white/40 text-[10px] md:text-xs tracking-wider uppercase">
+          <span className="hidden md:block">CLUB of Lifestyle Products</span>
           <span>Scroll to Explore</span>
-          <span>End-to-End Textile Supply Solutions</span>
+          <span className="hidden md:block">End-to-End Textile Supply Solutions</span>
         </div>
       </div>
 

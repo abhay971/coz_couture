@@ -101,7 +101,7 @@ export function Process() {
       <div className="relative z-10 section-padding">
         <div className="container-padding">
           {/* Header */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 mb-12 md:mb-24">
             <div>
               <span className="inline-block text-xs font-bold tracking-[0.3em] text-coz-blue uppercase mb-6">
                 How We Work
@@ -127,7 +127,7 @@ export function Process() {
           {/* Process Steps */}
           <div ref={stepsRef} className="relative">
             {/* Vertical Progress Line */}
-            <div className="absolute left-8 lg:left-1/2 top-0 bottom-0 w-px bg-coz-silver lg:-translate-x-1/2">
+            <div className="absolute left-5 sm:left-8 lg:left-1/2 top-0 bottom-0 w-px bg-coz-silver lg:-translate-x-1/2">
               <div
                 ref={progressRef}
                 className="absolute top-0 left-0 w-full bg-linear-to-b from-coz-orange via-coz-blue to-coz-green origin-top"
@@ -151,11 +151,11 @@ export function Process() {
           </div>
 
           {/* Bottom CTA */}
-          <div className="mt-24 text-center">
-            <p className="text-coz-gray mb-6">Ready to start your journey?</p>
+          <div className="mt-12 md:mt-24 text-center">
+            <p className="text-coz-gray text-sm md:text-base mb-4 md:mb-6">Ready to start your journey?</p>
             <button
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="group inline-flex items-center gap-4 px-8 py-4 bg-coz-charcoal text-white font-medium tracking-wider uppercase hover:bg-coz-orange transition-colors duration-500"
+              className="group inline-flex items-center gap-3 md:gap-4 px-6 md:px-8 py-3 md:py-4 bg-coz-charcoal text-white text-sm md:text-base font-medium tracking-wider uppercase hover:bg-coz-orange transition-colors duration-500"
             >
               <span>Get Started</span>
               <svg
@@ -211,17 +211,17 @@ function ProcessStep({ step, index, isActive, color, isEven }) {
     >
       {/* Number Node */}
       <div
-        className={`absolute left-8 lg:left-1/2 top-0 w-16 h-16 rounded-full flex items-center justify-center z-20 transition-all duration-500 lg:-translate-x-1/2 ${
+        className={`absolute left-0 sm:left-2 lg:left-1/2 top-0 w-10 h-10 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full flex items-center justify-center z-20 transition-all duration-500 lg:-translate-x-1/2 ${
           isActive ? 'scale-100' : 'scale-75 opacity-50'
         }`}
         style={{ backgroundColor: color }}
       >
-        <span className="text-2xl font-bold text-white">{step.number}</span>
+        <span className="text-base sm:text-xl lg:text-2xl font-bold text-white">{step.number}</span>
       </div>
 
       {/* Content Side */}
       <div
-        className={`pl-28 lg:pl-0 ${isEven ? 'lg:pr-20 lg:text-right' : 'lg:pl-20 lg:text-left lg:direction-ltr'}`}
+        className={`pl-14 sm:pl-20 lg:pl-0 ${isEven ? 'lg:pr-20 lg:text-right' : 'lg:pl-20 lg:text-left lg:direction-ltr'}`}
       >
         <span
           className="text-xs font-bold tracking-[0.3em] uppercase mb-3 inline-block"
@@ -229,19 +229,19 @@ function ProcessStep({ step, index, isActive, color, isEven }) {
         >
           Step {step.number}
         </span>
-        <h3 className="text-2xl lg:text-3xl font-bold text-coz-charcoal mb-4">
+        <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-coz-charcoal mb-3 sm:mb-4">
           {step.title}
         </h3>
-        <p className="text-lg text-coz-gray leading-relaxed">
+        <p className="text-sm sm:text-base lg:text-lg text-coz-gray leading-relaxed">
           {step.description}
         </p>
       </div>
 
       {/* Card Side */}
-      <div className={`pl-28 lg:pl-0 ${isEven ? 'lg:pl-20' : 'lg:pr-20 lg:direction-ltr'}`}>
+      <div className={`pl-14 sm:pl-20 lg:pl-0 ${isEven ? 'lg:pl-20' : 'lg:pr-20 lg:direction-ltr'}`}>
         <div
           ref={cardRef}
-          className="group relative bg-white p-8 shadow-xl hover:shadow-2xl transition-shadow duration-500 cursor-none"
+          className="group relative bg-white p-5 sm:p-6 lg:p-8 shadow-xl hover:shadow-2xl transition-shadow duration-500 cursor-none"
           style={{ transformStyle: 'preserve-3d' }}
           onMouseEnter={() => setHovering(true)}
           onMouseMove={handleMouseMove}
@@ -249,7 +249,7 @@ function ProcessStep({ step, index, isActive, color, isEven }) {
         >
           {/* Icon/Visual */}
           <div
-            className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500"
+            className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-500"
             style={{ backgroundColor: `${color}15` }}
           >
             <StepIcon index={index} color={color} />

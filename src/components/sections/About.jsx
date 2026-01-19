@@ -102,7 +102,7 @@ export function About() {
     >
       {/* Main Content */}
       <div className="section-padding container-padding">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center">
           {/* Left - Content */}
           <div>
             {/* Eyebrow */}
@@ -112,7 +112,7 @@ export function About() {
 
             {/* Heading */}
             <div className="overflow-hidden mb-8">
-              <h2 ref={headingRef} className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
+              <h2 ref={headingRef} className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
                 Where Tradition 
                 <br />
                 Meets Tomorrow
@@ -163,7 +163,7 @@ export function About() {
             <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
               <img
                 ref={imageRef}
-                src="https://images.unsplash.com/photo-1606722590583-6951b5ea92ad?w=800&q=80"
+                src="/about/about.png"
                 alt="Indian textile craftsmanship"
                 className="w-full h-full object-cover"
                 onMouseEnter={() => setHovering(true)}
@@ -172,7 +172,7 @@ export function About() {
             </div>
 
             {/* Floating Quote */}
-            <div className="relative lg:absolute lg:-bottom-8 lg:-left-12 mt-6 lg:mt-0 bg-coz-charcoal text-white p-5 sm:p-6 lg:p-8 rounded-lg max-w-xs mx-auto lg:mx-0">
+            <div className="relative lg:absolute lg:-bottom-6 xl:-bottom-8 lg:-left-8 xl:-left-12 mt-6 lg:mt-0 bg-coz-charcoal text-white p-5 sm:p-6 lg:p-6 xl:p-8 rounded-lg max-w-xs mx-auto lg:mx-0">
               <p className="text-sm lg:text-base italic leading-relaxed">
                 "We don't just deliver textiles. We deliver trust."
               </p>

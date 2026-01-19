@@ -73,11 +73,11 @@ export function Footer() {
             <div className="marquee-track flex whitespace-nowrap">
               {[...Array(4)].map((_, i) => (
                 <div key={i} className="flex items-center shrink-0">
-                  <span className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-transparent stroke-text uppercase tracking-tight px-4 sm:px-8">
+                  <span className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-transparent stroke-text uppercase tracking-tight px-4 sm:px-8">
                     Let's Create Together
                   </span>
                   <span className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-coz-orange mx-4 sm:mx-8" />
-                  <span className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-transparent stroke-text uppercase tracking-tight px-4 sm:px-8">
+                  <span className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-transparent stroke-text uppercase tracking-tight px-4 sm:px-8">
                     Have a Project?
                   </span>
                   <span className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-coz-blue mx-4 sm:mx-8" />
@@ -120,7 +120,7 @@ export function Footer() {
       {/* Main Footer Content */}
       <div className="relative py-16 lg:py-20">
         <div className="container-padding">
-          <div className="flex flex-col md:flex-row justify-between gap-12 lg:gap-16">
+          <div className="flex flex-col md:flex-row justify-between gap-10 lg:gap-12 xl:gap-16">
             {/* Brand Section */}
             <div className="md:max-w-xs footer-reveal text-center md:text-left">
               <img
@@ -258,7 +258,7 @@ export function Footer() {
           </div>
 
           {/* Office Locations */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 xl:gap-16 max-w-5xl mx-auto">
             {/* India */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-3">

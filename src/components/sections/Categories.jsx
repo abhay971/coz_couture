@@ -82,7 +82,7 @@ export function Categories() {
                 Our Categories
               </span>
               <div ref={headingRef}>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
+                <h2 className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
                   Explore Our
                   <br />
                   <span className="text-coz-charcoal">Collections</span>
@@ -94,7 +94,7 @@ export function Categories() {
             <div className="flex items-center gap-6">
               <div className="text-right">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl sm:text-5xl lg:text-7xl font-light text-coz-charcoal tabular-nums">
+                  <span className="text-4xl sm:text-5xl lg:text-5xl xl:text-7xl font-light text-coz-charcoal tabular-nums">
                     {String(activeIndex + 1).padStart(2, '0')}
                   </span>
                   <span className="text-lg sm:text-xl text-coz-gray/30">/</span>
@@ -224,7 +224,7 @@ function CategoryCard({ category, index }) {
   return (
     <div
       ref={cardRef}
-      className="category-card relative shrink-0 w-[85vw] md:w-[55vw] lg:w-[38vw] h-[55vh] md:h-[60vh] lg:h-[65vh] cursor-none"
+      className="category-card relative shrink-0 w-[85vw] md:w-[55vw] lg:w-[42vw] xl:w-[38vw] h-[55vh] md:h-[60vh] lg:h-[60vh] xl:h-[65vh] cursor-none"
       style={{ perspective: '1200px', transformStyle: 'preserve-3d' }}
       onMouseEnter={handleMouseEnter}
       onMouseMove={handleMouseMove}
@@ -253,30 +253,34 @@ function CategoryCard({ category, index }) {
             {String(index + 1).padStart(2, '0')}
           </span>
 
-          {/* Title */}
-          <h3 className="text-2xl lg:text-3xl font-semibold text-white mb-3 leading-tight">
+          {/* Title - Fixed height for alignment */}
+          <h3 className="text-2xl lg:text-3xl font-semibold text-white mb-3 leading-tight min-h-[2.5rem] lg:min-h-[3rem]">
             {category.name}
           </h3>
 
-          {/* Description - Shows on hover */}
-          <p className={`text-sm text-white/60 mb-4 max-w-sm leading-relaxed transition-all duration-400 ${
-            isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
-          }`}>
-            {category.description}
-          </p>
+          {/* Description - Fixed height container, shows on hover */}
+          <div className="h-[3.5rem] lg:h-[4rem] mb-3">
+            <p className={`text-sm text-white/70 leading-relaxed line-clamp-2 transition-all duration-400 ${
+              isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
+            }`}>
+              {category.description}
+            </p>
+          </div>
 
-          {/* Tags - Shows on hover */}
-          <div className={`flex flex-wrap gap-2 transition-all duration-400 delay-75 ${
-            isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
-          }`}>
-            {category.details?.slice(0, 3).map((detail, i) => (
-              <span
-                key={i}
-                className="px-3 py-1 text-xs text-white/70 bg-white/10 rounded-full"
-              >
-                {detail}
-              </span>
-            ))}
+          {/* Tags - Fixed height container, shows on hover */}
+          <div className="h-[2rem]">
+            <div className={`flex flex-wrap gap-2 transition-all duration-400 delay-75 ${
+              isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
+            }`}>
+              {category.details?.slice(0, 3).map((detail, i) => (
+                <span
+                  key={i}
+                  className="px-3 py-1 text-xs text-white/70 bg-white/10 rounded-full"
+                >
+                  {detail}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 

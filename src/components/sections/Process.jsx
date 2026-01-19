@@ -107,10 +107,10 @@ export function Process() {
                 How We Work
               </span>
               <div ref={headingRef} className="overflow-hidden">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
+                <h2 className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
                   {renderSplitText('From Vision')}
                   <br />
-                  <span className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
+                  <span className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
                     {renderSplitText('To Reality')}
                   </span>
                 </h2>
@@ -229,7 +229,7 @@ function ProcessStep({ step, index, isActive, color, isEven }) {
         >
           Step {step.number}
         </span>
-        <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-coz-charcoal mb-3 sm:mb-4">
+        <h3 className="text-xl sm:text-2xl lg:text-2xl xl:text-3xl font-bold text-coz-charcoal mb-3 sm:mb-4">
           {step.title}
         </h3>
         <p className="text-sm sm:text-base lg:text-lg text-coz-gray leading-relaxed">

@@ -130,7 +130,7 @@ export function Capabilities() {
     >
       <div className="relative z-10 section-padding">
         <div className="container-padding">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 xl:gap-20">
             {/* Left Column */}
             <div className="lg:col-span-5">
               <div className="lg:sticky lg:top-32">
@@ -139,7 +139,7 @@ export function Capabilities() {
                 </span>
 
                 <div ref={headingRef} className="mb-8">
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
+                  <h2 className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
                     Our
                     <br />
                     <span className="text-coz-charcoal">Capabilities</span>
@@ -264,7 +264,7 @@ function CapabilityItem({ capability, index, isActive, onHover }) {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3 sm:gap-6">
           <span
-            className={`text-2xl sm:text-4xl lg:text-5xl font-light tabular-nums transition-colors duration-300 ${
+            className={`text-2xl sm:text-4xl lg:text-4xl xl:text-5xl font-light tabular-nums transition-colors duration-300 ${
               isActive ? 'text-coz-orange' : 'text-coz-silver'
             }`}
           >
@@ -272,7 +272,7 @@ function CapabilityItem({ capability, index, isActive, onHover }) {
           </span>
           <div>
             <h3
-              className={`text-sm sm:text-xl lg:text-2xl font-semibold transition-colors duration-300 ${
+              className={`text-sm sm:text-xl lg:text-xl xl:text-2xl font-semibold transition-colors duration-300 ${
                 isActive ? 'text-coz-charcoal' : 'text-coz-gray'
               }`}
             >

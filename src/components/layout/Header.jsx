@@ -59,7 +59,7 @@ export function Header() {
               className="h-8 sm:h-10 md:h-12 w-auto object-contain"
               data-cursor-protect
             />
-            <span className="block text-[10px] sm:text-xs font-medium text-white/80 mt-1 tracking-wide">
+            <span className="font-bold text-white mt-1 tracking-wide">
               CLUB of Lifestyle Products
             </span>
           </a>
@@ -102,7 +102,7 @@ export function Header() {
               className="h-8 sm:h-10 md:h-12 w-auto object-contain transition-opacity duration-500"
               data-cursor-protect
             />
-            <span className="block text-[10px] sm:text-xs font-medium text-gray-600 mt-1 tracking-wide">
+            <span className="font-bold text-gray-900 mt-1 tracking-wide">
               CLUB of Lifestyle Products
             </span>
           </a>

@@ -125,8 +125,8 @@ export function Footer() {
 
             {/* Navigation Links */}
             <div className="footer-reveal flex flex-col items-center">
-              <div>
-                <h4 className="text-xs font-bold tracking-[0.25em] text-coz-orange uppercase mb-6">
+              <div className="text-center">
+                <h4 className="text-sm font-bold tracking-[0.25em] text-coz-orange uppercase mb-6">
                   Navigation
                 </h4>
                 <ul className="space-y-3">
@@ -148,8 +148,8 @@ export function Footer() {
 
             {/* Services */}
             <div className="footer-reveal flex flex-col items-center">
-              <div>
-                <h4 className="text-xs font-bold tracking-[0.25em] text-coz-orange uppercase mb-6">
+              <div className="text-center">
+                <h4 className="text-sm font-bold tracking-[0.25em] text-coz-orange uppercase mb-6">
                   What We Do
                 </h4>
                 <ul className="space-y-3">
@@ -170,7 +170,7 @@ export function Footer() {
                       onMouseEnter={() => setHovering(true)}
                       onMouseLeave={() => resetCursor()}
                     >
-                      Production Planning 
+                      Production Planning
                     </button>
                   </li>
                   <li>
@@ -180,7 +180,7 @@ export function Footer() {
                       onMouseEnter={() => setHovering(true)}
                       onMouseLeave={() => resetCursor()}
                     >
-                      Quality Assurance 
+                      Quality Assurance
                     </button>
                   </li>
                   <li>

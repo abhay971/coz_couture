@@ -104,7 +104,7 @@ export function About() {
       <div className="section-padding container-padding">
         {/* Centered Header */}
         <div className="text-center mb-12 lg:mb-16">
-          <span className="inline-block text-xs font-medium tracking-[0.3em] text-coz-orange uppercase mb-6">
+          <span className="inline-block text-sm font-bold tracking-[0.3em] text-coz-orange uppercase mb-6">
             CLUB of Lifestyle
           </span>
           <div className="overflow-hidden">
@@ -118,7 +118,7 @@ export function About() {
           {/* Left - Content */}
           <div className="flex flex-col">
             {/* Text Content */}
-            <div ref={textRef} className="space-y-6 text-coz-gray leading-relaxed">
+            <div ref={textRef} className="space-y-6 text-coz-gray justify-center text-justify leading-relaxed">
               <p className="text-lg">
                 Every thread tells a story. Since 2009, we've been connecting global brands
                 with exceptional textile manufacturing—partnering with skilled craftsmen and

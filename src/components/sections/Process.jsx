@@ -44,7 +44,7 @@ export function Process() {
       <div className="section-padding container-padding">
         {/* Header */}
         <div className="text-center mb-16 lg:mb-24">
-          <span className="inline-block text-xs font-medium tracking-[0.3em] text-coz-orange uppercase mb-6">
+          <span className="inline-block text-sm font-bold tracking-[0.3em] text-coz-orange uppercase mb-6">
             How It Works
           </span>
           <div ref={headingRef}>
@@ -207,7 +207,7 @@ function StepContent({ step, index, isActive, color }) {
         </div>
 
         {/* Description */}
-        <p className="text-sm lg:text-base xl:text-lg text-coz-gray leading-relaxed mb-4 lg:mb-6">
+        <p className="text-sm lg:text-base xl:text-lg text-coz-gray leading-relaxed mb-4 lg:mb-6 justify-center text-justify">
           {step.description}
         </p>
 

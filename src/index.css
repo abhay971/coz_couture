@@ -33,18 +33,18 @@
   /* Typography Scale - Fluid */
   --font-size-display: clamp(4rem, 12vw, 10rem);
   --font-size-hero: clamp(3rem, 8vw, 7rem);
-  --font-size-h1: clamp(2.5rem, 5vw, 4.5rem);
-  --font-size-h2: clamp(2rem, 4vw, 3.5rem);
-  --font-size-h3: clamp(1.5rem, 3vw, 2.5rem);
-  --font-size-h4: clamp(1.25rem, 2vw, 1.75rem);
+  --font-size-h1: clamp(2.75rem, 6vw, 5rem);
+  --font-size-h2: clamp(2.25rem, 5vw, 4rem);
+  --font-size-h3: clamp(1.75rem, 3.5vw, 3rem);
+  --font-size-h4: clamp(1.5rem, 2.5vw, 2rem);
   --font-size-body-lg: clamp(1.125rem, 1.5vw, 1.375rem);
   --font-size-body: clamp(1rem, 1.2vw, 1.125rem);
   --font-size-small: clamp(0.875rem, 1vw, 1rem);
   --font-size-xs: clamp(0.75rem, 0.9vw, 0.875rem);
 
   /* Spacing */
-  --spacing-section: clamp(5rem, 12vh, 10rem);
-  --spacing-component: clamp(3rem, 6vh, 5rem);
+  --spacing-section: clamp(3rem, 8vh, 6rem);
+  --spacing-component: clamp(2rem, 4vh, 3rem);
 
   /* Animation Easings */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);

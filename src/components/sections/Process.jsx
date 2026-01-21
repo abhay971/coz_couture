@@ -33,7 +33,7 @@ export function Process() {
     return () => ctx.revert()
   }, [])
 
-  const colors = ['#F37E3A', '#288EC2', '#6EBD49', '#F37E3A', '#288EC2']
+  const colors = ['#F37E3A', '#288EC2', '#6EBD49', '#1A1A1A']
 
   return (
     <section

@@ -1,9 +1,9 @@
 export const navLinks = [
-  { id: 'about', label: 'About', href: '#about' },
+  { id: 'about', label: 'About Us', href: '#about' },
   { id: 'categories', label: 'Categories', href: '#categories' },
-  { id: 'process', label: 'Process', href: '#process' },
-  { id: 'capabilities', label: 'Capabilities', href: '#capabilities' },
-  { id: 'contact', label: 'Contact', href: '#contact' },
+  { id: 'contact', label: 'Contact Us', href: '#contact' },
+  { id: 'process', label: 'Our Process', href: '#process' },
+  // { id: 'capabilities', label: 'Capabilities', href: '#capabilities' },
 ]
 
 export const socialLinks = [

@@ -130,26 +130,26 @@ export function Capabilities() {
     >
       <div className="relative z-10 section-padding">
         <div className="container-padding">
+          {/* Centered Header */}
+          <div className="text-center mb-12 lg:mb-16">
+            <span className="inline-block text-xs font-medium tracking-[0.3em] text-coz-orange uppercase mb-6">
+              Our Expertise
+            </span>
+            <div ref={headingRef} className="mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
+                Our Capabilities
+              </h2>
+            </div>
+            <p className="text-lg text-coz-gray leading-relaxed max-w-2xl mx-auto">
+              End-to-end solutions tailored to your business needs. From concept
+              to delivery, we handle it all with precision and care.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 xl:gap-20">
             {/* Left Column */}
             <div className="lg:col-span-5">
               <div className="lg:sticky lg:top-32">
-                <span className="inline-block text-xs font-medium tracking-[0.3em] text-coz-orange uppercase mb-6">
-                  What We Do
-                </span>
-
-                <div ref={headingRef} className="mb-8">
-                  <h2 className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
-                    Our
-                    <br />
-                    <span className="text-coz-charcoal">Capabilities</span>
-                  </h2>
-                </div>
-
-                <p className="text-lg text-coz-gray leading-relaxed mb-12 max-w-md">
-                  End-to-end solutions tailored to your business needs. From concept
-                  to delivery, we handle it all with precision and care.
-                </p>
 
                 {/* Active Capability Card */}
                 <div

@@ -1,7 +1,7 @@
 import { CursorProvider } from './context/CursorContext'
 import { LoadingProvider } from './context/LoadingContext'
 import { SmoothScroll } from './components/layout/SmoothScroll'
-import { CustomCursor } from './components/ui/CustomCursor'
+// import { CustomCursor } from './components/ui/CustomCursor'
 import { Header } from './components/layout/Header'
 import { Footer } from './components/layout/Footer'
 import { Preloader } from './components/sections/Preloader'
@@ -21,7 +21,7 @@ function App() {
           <Preloader />
 
           {/* Custom Cursor */}
-          <CustomCursor />
+          {/* <CustomCursor /> */}
 
           {/* Header */}
           <Header />
@@ -32,7 +32,7 @@ function App() {
             <About />
             <Categories />
             <Process />
-            <Capabilities />
+            {/* <Capabilities /> */}
             <Contact />
           </main>
 

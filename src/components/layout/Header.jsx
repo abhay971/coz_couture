@@ -60,7 +60,7 @@ export function Header() {
               data-cursor-protect
             />
             <span className="font-bold text-white mt-1 tracking-wide">
-              CLUB of Lifestyle Products
+              CLUB of Lifestyle
             </span>
           </a>
 
@@ -103,7 +103,7 @@ export function Header() {
               data-cursor-protect
             />
             <span className="font-bold text-gray-900 mt-1 tracking-wide">
-              CLUB of Lifestyle Products
+              CLUB of Lifestyle
             </span>
           </a>
 

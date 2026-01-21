@@ -69,21 +69,8 @@
    BASE STYLES
    ============================================ */
 @layer base {
-  @font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 100 900;
-    font-display: swap;
-    src: url('https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjp-Ek-_EeA.woff2') format('woff2');
-  }
-
-  @font-face {
-    font-family: 'Space Grotesk';
-    font-style: normal;
-    font-weight: 300 700;
-    font-display: swap;
-    src: url('https://fonts.gstatic.com/s/spacegrotesk/v16/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7oUXskPMBBSSJLm2E.woff2') format('woff2');
-  }
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
 
   * {
     margin: 0;
@@ -114,7 +101,7 @@
   }
 
   body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
     background-color: var(--color-coz-cream);
     color: var(--color-coz-charcoal);
     overflow-x: hidden;
@@ -145,7 +132,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: 'Syne', system-ui, sans-serif;
     font-weight: 500;
     line-height: 1.1;
     letter-spacing: -0.02em;
@@ -158,7 +145,7 @@
 @layer components {
   @media (pointer: fine) {
     * {
-      cursor: none !important;
+      cursor: auto !important;
     }
   }
 
@@ -172,6 +159,7 @@
     z-index: var(--z-cursor);
     transform: translate(-50%, -50%);
     transition: width 0.2s, height 0.2s, background-color 0.2s;
+    display: none;
   }
 
   .cursor-dot.hovering {
@@ -191,6 +179,7 @@
     transform: translate(-50%, -50%);
     transition: width 0.3s var(--ease-out-expo), height 0.3s var(--ease-out-expo),
                 border-color 0.2s, opacity 0.2s;
+    display: none;
   }
 
   .cursor-outline.hovering {
@@ -216,6 +205,7 @@
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: opacity 0.2s;
+    display: none;
   }
 
   .cursor-text.visible {
@@ -229,7 +219,7 @@
 @layer utilities {
   .text-display {
     font-size: var(--font-size-display);
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: 'Syne', system-ui, sans-serif;
     font-weight: 700;
     line-height: 0.9;
     letter-spacing: -0.04em;
@@ -237,7 +227,7 @@
 
   .text-hero {
     font-size: var(--font-size-hero);
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: 'Syne', system-ui, sans-serif;
     font-weight: 600;
     line-height: 1;
     letter-spacing: -0.03em;
@@ -382,7 +372,7 @@
     align-items: center;
     justify-content: center;
     padding: 1rem 2rem;
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: 'Syne', system-ui, sans-serif;
     font-weight: 500;
     font-size: 0.875rem;
     letter-spacing: 0.05em;
@@ -579,7 +569,7 @@
 
   .preloader-logo {
     font-size: clamp(2rem, 5vw, 4rem);
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: 'Syne', system-ui, sans-serif;
     font-weight: 700;
     color: var(--color-coz-white);
     letter-spacing: -0.02em;
@@ -601,7 +591,7 @@
 
   .preloader-counter {
     margin-top: 1rem;
-    font-family: 'Space Grotesk', monospace;
+    font-family: 'Syne', monospace;
     font-size: 0.875rem;
     color: var(--color-coz-white);
     letter-spacing: 0.1em;

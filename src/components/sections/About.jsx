@@ -102,42 +102,38 @@ export function About() {
     >
       {/* Main Content */}
       <div className="section-padding container-padding">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center">
+        {/* Centered Header */}
+        <div className="text-center mb-12 lg:mb-16">
+          <span className="inline-block text-xs font-medium tracking-[0.3em] text-coz-orange uppercase mb-6">
+            CLUB of Lifestyle
+          </span>
+          <div className="overflow-hidden">
+            <h2 ref={headingRef} className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
+              Where Tradition Meets Tomorrow
+            </h2>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-stretch">
           {/* Left - Content */}
-          <div>
-            {/* Eyebrow */}
-            <span className="inline-block text-xs font-medium tracking-[0.3em] text-coz-orange uppercase mb-8">
-              About Us
-            </span>
-
-            {/* Heading */}
-            <div className="overflow-hidden mb-8">
-              <h2 ref={headingRef} className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
-                Where Tradition 
-                <br />
-                Meets Tomorrow
-                {/* <span className="text-coz-gray/50">Meets Tomorrow</span> */}
-              </h2>
-            </div>
-
+          <div className="flex flex-col">
             {/* Text Content */}
             <div ref={textRef} className="space-y-6 text-coz-gray leading-relaxed">
               <p className="text-lg">
-                Every thread tells a story. Since 2009, we've been privileged to share
-                India's most extraordinary textile stories with the world—stories woven
-                through generations of master craftsmen, stories dyed in traditions older
-                than time itself.
+                Every thread tells a story. Since 2009, we've been connecting global brands
+                with exceptional textile manufacturing—partnering with skilled craftsmen and
+                state-of-the-art facilities to deliver products that exceed expectations.
               </p>
               <p>
-                We don't just source fabrics. We seek out the extraordinary—the Banarasi
-                weaver whose family has perfected their craft for seven generations, the
-                block printer in Jaipur whose patterns carry centuries of heritage, the
-                modern mills pushing the boundaries of innovation.
+                We don't just source materials. We seek out the extraordinary—the master
+                weavers who have perfected their craft over generations, the innovative
+                manufacturers who blend traditional techniques with cutting-edge technology,
+                and the quality-focused facilities that set industry standards.
               </p>
               <p>
                 Excellence isn't a destination—it's our daily pursuit. Every piece we deliver
                 carries the weight of our reputation, built on fifteen years of unwavering
-                dedication to craft, quality, and the relationships we've nurtured along the way.
+                dedication to craft, quality, and the partnerships we've nurtured along the way.
               </p>
             </div>
 
@@ -145,27 +141,27 @@ export function About() {
             <div ref={statsRef} className="grid grid-cols-3 gap-4 sm:gap-8 mt-10 md:mt-12 pt-6 md:pt-8 border-t border-coz-silver/50">
               <div className="stat-item text-center sm:text-left">
                 <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-coz-orange">15+</span>
-                <p className="text-xs sm:text-sm text-coz-gray mt-1">Years of Craft</p>
+                <p className="text-xs sm:text-sm text-coz-gray mt-1">Years of Excellence</p>
               </div>
               <div className="stat-item text-center sm:text-left">
                 <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-coz-blue">500+</span>
-                <p className="text-xs sm:text-sm text-coz-gray mt-1">Artisan Networks</p>
+                <p className="text-xs sm:text-sm text-coz-gray mt-1">Global Partners</p>
               </div>
               <div className="stat-item text-center sm:text-left">
                 <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-coz-green">25+</span>
-                <p className="text-xs sm:text-sm text-coz-gray mt-1">Countries Reached</p>
+                <p className="text-xs sm:text-sm text-coz-gray mt-1">Countries Served</p>
               </div>
             </div>
           </div>
 
           {/* Right - Image */}
-          <div className="relative">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
+          <div className="relative flex flex-col">
+            <div className="relative flex-1 min-h-[300px] lg:min-h-0 overflow-hidden rounded-lg">
               <img
                 ref={imageRef}
                 src="/about/about.png"
-                alt="Indian textile craftsmanship"
-                className="w-full h-full object-cover"
+                alt="Textile manufacturing excellence"
+                className="absolute inset-0 w-full h-full object-cover"
                 onMouseEnter={() => setHovering(true)}
                 onMouseLeave={() => setHovering(false)}
               />
@@ -174,11 +170,12 @@ export function About() {
             {/* Floating Quote */}
             <div className="relative lg:absolute lg:-bottom-6 xl:-bottom-8 lg:-left-8 xl:-left-12 mt-6 lg:mt-0 bg-coz-charcoal text-white p-5 sm:p-6 lg:p-6 xl:p-8 rounded-lg max-w-xs mx-auto lg:mx-0">
               <p className="text-sm lg:text-base italic leading-relaxed">
-                "We don't just deliver textiles. We deliver trust."
+                "We don't just deliver textiles, <br/>
+                We deliver trust."
               </p>
-              <div className="mt-3 lg:mt-4 flex items-center gap-3">
-                <div className="w-8 lg:w-10 h-0.5 bg-coz-orange" />
+              <div className="mt-3 lg:mt-4 flex items-center justify-end gap-3">
                 <span className="text-xs text-white/60 uppercase tracking-wider">Our Promise</span>
+                <div className="w-8 lg:w-10 h-0.5 bg-coz-orange" />
               </div>
             </div>
           </div>

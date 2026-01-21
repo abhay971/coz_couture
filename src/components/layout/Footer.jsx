@@ -66,9 +66,8 @@ export function Footer() {
       </div>
 
       {/* Marquee CTA Section */}
-      <div ref={marqueeRef} className="border-b border-white/10">
+      {/* <div ref={marqueeRef} className="border-b border-white/10">
         <div className="relative py-10 sm:py-16 lg:py-24">
-          {/* Marquee Background - Behind */}
           <div className="absolute inset-0 overflow-hidden flex items-center">
             <div className="marquee-track flex whitespace-nowrap">
               {[...Array(4)].map((_, i) => (
@@ -86,55 +85,27 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Centered CTA Button - In front */}
-          {/* <div className="relative z-10 flex items-center justify-center">
-            <button
-              onClick={() => scrollToSection('#contact')}
-              onMouseEnter={() => setHovering(true)}
-              onMouseLeave={() => resetCursor()}
-              className="group relative px-10 py-5 bg-coz-orange text-white font-semibold tracking-wide overflow-hidden transition-transform duration-300 hover:scale-105"
-            >
-              <span className="relative z-10 flex items-center gap-3">
-                Get in Touch
-                <svg
-                  className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </span>
-              <div className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
-              <span className="absolute inset-0 flex items-center justify-center gap-3 text-coz-charcoal opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                Get in Touch
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </span>
-            </button>
-          </div> */}
+        
         </div>
-      </div>
+      </div> */}
 
       {/* Main Footer Content */}
-      <div className="relative py-16 lg:py-20">
+      <div className="relative pt-8 pb-6 lg:pt-16 lg:pb-10">
         <div className="container-padding">
-          <div className="flex flex-col md:flex-row justify-between gap-10 lg:gap-12 xl:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 xl:gap-16">
             {/* Brand Section */}
-            <div className="md:max-w-xs footer-reveal text-center md:text-left">
+            <div className="footer-reveal">
               <img
                 src="/logo/COZ_COUTURE_White.png"
                 alt="COZ COUTURE"
-                className="h-12 w-auto mb-3 mx-auto md:mx-0"
+                className="h-12 w-auto mb-3"
               />
               <p className="text-white/70 text-sm font-medium tracking-wider uppercase mb-6">
-                CLUB of Lifestyle Products
+                CLUB of Lifestyle
               </p>
 
-
               {/* Social Links */}
-              <div className="flex gap-3 justify-center md:justify-start">
+              <div className="flex gap-3">
                 {socialLinks.map((social) => (
                   <a
                     key={social.id}
@@ -153,93 +124,87 @@ export function Footer() {
             </div>
 
             {/* Navigation Links */}
-            <div className="footer-reveal text-center md:text-left">
-              <h4 className="text-xs font-bold tracking-[0.25em] text-coz-orange uppercase mb-6">
-                Navigation
-              </h4>
-              <ul className="space-y-3 inline-flex flex-col items-center md:items-start">
-                {navLinks.map((link) => (
-                  <li key={link.id}>
-                    <button
-                      onClick={() => scrollToSection(link.href)}
-                      className="group flex items-center gap-3 text-white/60 hover:text-white transition-colors duration-300"
-                      onMouseEnter={() => setHovering(true)}
-                      onMouseLeave={() => resetCursor()}
-                    >
-                      <span className="w-0 h-px bg-coz-orange group-hover:w-4 transition-all duration-300" />
-                      <span className="text-sm tracking-wide">{link.label}</span>
-                    </button>
-                  </li>
-                ))}
-              </ul>
+            <div className="footer-reveal flex flex-col items-center">
+              <div>
+                <h4 className="text-xs font-bold tracking-[0.25em] text-coz-orange uppercase mb-6">
+                  Navigation
+                </h4>
+                <ul className="space-y-3">
+                  {navLinks.map((link) => (
+                    <li key={link.id}>
+                      <button
+                        onClick={() => scrollToSection(link.href)}
+                        className="text-white/60 hover:text-white transition-colors duration-300 text-sm tracking-wide"
+                        onMouseEnter={() => setHovering(true)}
+                        onMouseLeave={() => resetCursor()}
+                      >
+                        {link.label}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
             {/* Services */}
-            <div className="footer-reveal text-center md:text-left">
-              <h4 className="text-xs font-bold tracking-[0.25em] text-coz-orange uppercase mb-6">
-                Services
-              </h4>
-              <ul className="space-y-3 inline-flex flex-col items-center md:items-start">
-                <li>
-                  <button
-                    onClick={() => scrollToSection('#capabilities')}
-                    className="group flex items-center gap-3 text-white/60 hover:text-white transition-colors duration-300"
-                    onMouseEnter={() => setHovering(true)}
-                    onMouseLeave={() => resetCursor()}
-                  >
-                    <span className="w-0 h-px bg-coz-orange group-hover:w-4 transition-all duration-300" />
-                    
-                    <span className="text-sm tracking-wide">Global Logistics</span>
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => scrollToSection('#capabilities')}
-                    className="group flex items-center gap-3 text-white/60 hover:text-white transition-colors duration-300"
-                    onMouseEnter={() => setHovering(true)}
-                    onMouseLeave={() => resetCursor()}
-                  >
-                    <span className="w-0 h-px bg-coz-orange group-hover:w-4 transition-all duration-300" />
-                    
-                     <span className="text-sm tracking-wide">Quality Assurance</span>
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => scrollToSection('#capabilities')}
-                    className="group flex items-center gap-3 text-white/60 hover:text-white transition-colors duration-300"
-                    onMouseEnter={() => setHovering(true)}
-                    onMouseLeave={() => resetCursor()}
-                  >
-                    <span className="w-0 h-px bg-coz-orange group-hover:w-4 transition-all duration-300" />
-                    
-                    <span className="text-sm tracking-wide">Custom Manufacturing</span>
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => scrollToSection('#capabilities')}
-                    className="group flex items-center gap-3 text-white/60 hover:text-white transition-colors duration-300"
-                    onMouseEnter={() => setHovering(true)}
-                    onMouseLeave={() => resetCursor()}
-                  >
-                    <span className="w-0 h-px bg-coz-orange group-hover:w-4 transition-all duration-300" />
-                   
-                    <span className="text-sm tracking-wide">Sampling & Prototyping</span>
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => scrollToSection('#capabilities')}
-                    className="group flex items-center gap-3 text-white/60 hover:text-white transition-colors duration-300"
-                    onMouseEnter={() => setHovering(true)}
-                    onMouseLeave={() => resetCursor()}
-                  >
-                    <span className="w-0 h-px bg-coz-orange group-hover:w-4 transition-all duration-300" />
-                    <span className="text-sm tracking-wide">Private Label Production</span>
-                  </button>
-                </li>
-              </ul>
+            <div className="footer-reveal flex flex-col items-center">
+              <div>
+                <h4 className="text-xs font-bold tracking-[0.25em] text-coz-orange uppercase mb-6">
+                  What We Do
+                </h4>
+                <ul className="space-y-3">
+                  <li>
+                    <button
+                      onClick={() => scrollToSection('#capabilities')}
+                      className="text-white/60 hover:text-white transition-colors duration-300 text-sm tracking-wide"
+                      onMouseEnter={() => setHovering(true)}
+                      onMouseLeave={() => resetCursor()}
+                    >
+                      Strategic Sourcing
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => scrollToSection('#capabilities')}
+                      className="text-white/60 hover:text-white transition-colors duration-300 text-sm tracking-wide"
+                      onMouseEnter={() => setHovering(true)}
+                      onMouseLeave={() => resetCursor()}
+                    >
+                      Production Planning 
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => scrollToSection('#capabilities')}
+                      className="text-white/60 hover:text-white transition-colors duration-300 text-sm tracking-wide"
+                      onMouseEnter={() => setHovering(true)}
+                      onMouseLeave={() => resetCursor()}
+                    >
+                      Quality Assurance 
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => scrollToSection('#capabilities')}
+                      className="text-white/60 hover:text-white transition-colors duration-300 text-sm tracking-wide"
+                      onMouseEnter={() => setHovering(true)}
+                      onMouseLeave={() => resetCursor()}
+                    >
+                      Logistics Management
+                    </button>
+                  </li>
+                  {/* <li>
+                    <button
+                      onClick={() => scrollToSection('#capabilities')}
+                      className="text-white/60 hover:text-white transition-colors duration-300 text-sm tracking-wide"
+                      onMouseEnter={() => setHovering(true)}
+                      onMouseLeave={() => resetCursor()}
+                    >
+                      Private Label Production
+                    </button>
+                  </li> */}
+                </ul>
+              </div>
             </div>
 
           </div>
@@ -247,7 +212,7 @@ export function Footer() {
       </div>
 
       {/* Our Offices Section */}
-      <div className="relative py-16 border-t border-white/10">
+      <div className="relative pt-6 pb-8 lg:pt-8 lg:pb-10">
         <div className="container-padding">
           {/* Header */}
           <div className="text-center mb-12">
@@ -258,7 +223,7 @@ export function Footer() {
           </div>
 
           {/* Office Locations */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 xl:gap-16 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 xl:gap-16">
             {/* India */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-3">

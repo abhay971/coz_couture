@@ -27,16 +27,14 @@ export function Contact() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Heading animation
-      const chars = headingRef.current?.querySelectorAll('.char')
-      if (chars) {
+      if (headingRef.current) {
         gsap.fromTo(
-          chars,
-          { yPercent: 100, opacity: 0 },
+          headingRef.current,
+          { y: 60, opacity: 0 },
           {
-            yPercent: 0,
+            y: 0,
             opacity: 1,
-            duration: 1,
-            stagger: 0.02,
+            duration: 1.2,
             ease: 'power4.out',
             scrollTrigger: {
               trigger: headingRef.current,
@@ -92,15 +90,6 @@ export function Contact() {
     setIsSubmitted(true)
   }
 
-  const renderSplitText = (text) => {
-    return text.split('').map((char, i) => (
-      <span key={i} className="inline-block overflow-hidden">
-        <span className={`char inline-block ${char === ' ' ? 'w-[0.25em]' : ''}`}>
-          {char === ' ' ? '\u00A0' : char}
-        </span>
-      </span>
-    ))
-  }
 
   return (
     <section
@@ -120,14 +109,14 @@ export function Contact() {
                 Let&apos;s Connect
               </span>
 
-              <div ref={headingRef} className="overflow-hidden mb-6 lg:mb-6 xl:mb-8">
-                <h2 className="text-3xl md:text-4xl lg:text-3xl xl:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
-                  {renderSplitText('Start Your Journey With Us')}
+              <div ref={headingRef} className="mb-6 lg:mb-6 xl:mb-8">
+                <h2 className="text-3xl md:text-4xl lg:text-3xl xl:text-5xl font-bold leading-[1.3] tracking-tight text-coz-charcoal">
+                  Start Your Journey With Us
                 </h2>
               </div>
 
               <p className="text-base lg:text-base xl:text-lg text-coz-gray leading-relaxed mb-8 lg:mb-8 xl:mb-12 max-w-lg">
-                Ready to bring Indian craftsmanship to your brand? Share your requirements
+                Ready to bring exceptional quality to your brand? Share your requirements
                 and our team will craft a tailored solution within 24 hours.
               </p>
 

@@ -113,7 +113,7 @@ export function Preloader() {
         <div ref={wordsRef} className="flex items-center justify-center gap-3 mb-10 md:mb-12 px-4">
           <span className="overflow-hidden">
             <span className="word inline-block text-xs sm:text-sm md:text-base lg:text-lg font-medium tracking-[0.15em] md:tracking-[0.2em] uppercase text-white/60">
-              CLUB of Lifestyle Products
+              CLUB of Lifestyle
             </span>
           </span>
         </div>
@@ -135,12 +135,12 @@ export function Preloader() {
       </div>
 
       {/* Corner Decorations */}
-      <div className="absolute top-8 left-8 text-white/20 text-xs tracking-widest">
+      {/* <div className="absolute top-8 left-8 text-white/20 text-xs tracking-widest">
         EST. 2009
       </div>
       <div className="absolute bottom-8 right-8 text-white/20 text-xs tracking-widest">
         INDIA
-      </div>
+      </div> */}
     </div>
   )
 }

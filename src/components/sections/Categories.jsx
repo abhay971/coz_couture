@@ -8,10 +8,8 @@ gsap.registerPlugin(ScrollTrigger)
 
 export function Categories() {
   const sectionRef = useRef(null)
-  const triggerRef = useRef(null)
-  const horizontalRef = useRef(null)
   const headingRef = useRef(null)
-  const [activeIndex, setActiveIndex] = useState(0)
+  const gridRef = useRef(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -31,35 +29,32 @@ export function Categories() {
         }
       )
 
-      // Calculate scroll distance
-      const getScrollDistance = () => {
-        const containerWidth = horizontalRef.current?.scrollWidth || 0
-        const viewportWidth = window.innerWidth
-        return containerWidth - viewportWidth
-      }
-
-      // Horizontal scroll animation
-      gsap.to(horizontalRef.current, {
-        x: () => -getScrollDistance(),
-        ease: 'none',
-        scrollTrigger: {
-          trigger: triggerRef.current,
-          start: 'top top',
-          end: () => `+=${getScrollDistance()}`,
-          scrub: 1,
-          pin: true,
-          anticipatePin: 1,
-          invalidateOnRefresh: true,
-          onUpdate: (self) => {
-            const newIndex = Math.floor(self.progress * categories.length)
-            setActiveIndex(Math.min(newIndex, categories.length - 1))
+      // Grid cards stagger animation
+      const cards = gridRef.current?.querySelectorAll('.category-card')
+      if (cards) {
+        gsap.fromTo(
+          cards,
+          {
+            y: 100,
+            opacity: 0,
+            scale: 0.95
           },
-        },
-      })
-
-
-      return () => {
-        ScrollTrigger.getAll().forEach((t) => t.kill())
+          {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            duration: 1,
+            stagger: {
+              amount: 0.6,
+              from: 'start'
+            },
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: gridRef.current,
+              start: 'top 80%',
+            },
+          }
+        )
       }
     }, sectionRef)
 
@@ -72,63 +67,36 @@ export function Categories() {
       ref={sectionRef}
       className="relative bg-coz-cream overflow-hidden"
     >
-      {/* Header Section */}
-      <div className="relative z-20 pt-22">
-        <div className="container-padding">
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-12">
-            {/* Left - Heading */}
-            <div className="max-w-3xl">
-              <span className="inline-block text-xs font-medium tracking-[0.3em] text-coz-orange uppercase mb-6">
-                Our Categories
-              </span>
-              <div ref={headingRef}>
-                <h2 className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
-                  Explore Our
-                  <br />
-                  <span className="text-coz-charcoal">Collections</span>
-                </h2>
-              </div>
-            </div>
-
-            {/* Right - Counter */}
-            <div className="flex items-center gap-6">
-              <div className="text-right">
-                <div className="flex items-baseline gap-2">
-                  <span className="text-4xl sm:text-5xl lg:text-5xl xl:text-7xl font-light text-coz-charcoal tabular-nums">
-                    {String(activeIndex + 1).padStart(2, '0')}
-                  </span>
-                  <span className="text-lg sm:text-xl text-coz-gray/30">/</span>
-                  <span className="text-lg sm:text-xl text-coz-gray/30">
-                    {String(categories.length).padStart(2, '0')}
-                  </span>
-                </div>
-              </div>
-            </div>
+      <div className="section-padding container-padding">
+        {/* Centered Header */}
+        <div className="text-center mb-12 lg:mb-12">
+          <span className="inline-block text-xs font-medium tracking-[0.3em] text-coz-orange uppercase mb-6">
+            What We Offer
+          </span>
+          <div ref={headingRef}>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-coz-charcoal mb-6">
+              Our Categories
+            </h2>
+            
           </div>
         </div>
-      </div>
 
-      {/* Horizontal Scroll Section */}
-      <div ref={triggerRef} className="relative h-screen overflow-hidden">
+        {/* Bento Grid */}
         <div
-          ref={horizontalRef}
-          className="flex gap-6 lg:gap-8 pl-8 lg:pl-16 pr-[50vw] h-full items-center"
-          style={{ width: 'fit-content' }}
+          ref={gridRef}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6"
         >
           {categories.map((category, index) => (
             <CategoryCard
               key={category.id}
               category={category}
               index={index}
-              isActive={activeIndex === index}
             />
           ))}
         </div>
-      </div>
 
-      {/* Bottom Section */}
-      <div className="relative z-20 bg-coz-cream">
-        <div className="container-padding text-center">
+        {/* Bottom CTA */}
+        {/* <div className="text-center mt-12 lg:mt-16">
           <p className="text-coz-gray text-sm tracking-wider uppercase mb-4">
             Can&apos;t find what you&apos;re looking for?
           </p>
@@ -136,10 +104,10 @@ export function Categories() {
             onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
             className="group inline-flex items-center gap-3 sm:gap-4"
           >
-            <span className="text-base sm:text-xl lg:text-2xl font-medium text-coz-charcoal group-hover:text-coz-orange transition-colors duration-500">
+            <span className="text-base sm:text-xl lg:text-xl font-medium text-coz-charcoal group-hover:text-coz-orange transition-colors duration-500">
               Let&apos;s discuss your requirements
             </span>
-            <span className="relative w-10 h-10 sm:w-14 sm:h-14 rounded-full border border-coz-charcoal/20 flex items-center justify-center overflow-hidden group-hover:border-coz-orange transition-colors duration-500">
+            <span className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-coz-charcoal/20 flex items-center justify-center overflow-hidden group-hover:border-coz-orange transition-colors duration-500">
               <span className="absolute inset-0 bg-coz-orange scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full" />
               <svg
                 className="w-4 h-4 sm:w-5 sm:h-5 text-coz-charcoal group-hover:text-white relative z-10 group-hover:translate-x-1 transition-all duration-300"
@@ -151,7 +119,7 @@ export function Categories() {
               </svg>
             </span>
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   )
@@ -167,16 +135,18 @@ function CategoryCard({ category, index }) {
   const handleMouseEnter = () => {
     setIsHovered(true)
     setHovering(true)
-    setCursorText('View')
+    setCursorText('Explore')
 
+    // Image zoom
     gsap.to(imageRef.current, {
-      scale: 1.08,
+      scale: 1.1,
       duration: 0.8,
       ease: 'power2.out',
     })
 
+    // Content lift
     gsap.to(contentRef.current, {
-      y: -10,
+      y: -8,
       duration: 0.4,
       ease: 'power2.out',
     })
@@ -197,98 +167,96 @@ function CategoryCard({ category, index }) {
       duration: 0.4,
       ease: 'power2.out',
     })
-
-    gsap.to(cardRef.current, {
-      rotateY: 0,
-      rotateX: 0,
-      duration: 0.6,
-      ease: 'power2.out',
-    })
   }
 
-  const handleMouseMove = (e) => {
-    if (!cardRef.current) return
-
-    const rect = cardRef.current.getBoundingClientRect()
-    const x = e.clientX - rect.left - rect.width / 2
-    const y = e.clientY - rect.top - rect.height / 2
-
-    gsap.to(cardRef.current, {
-      rotateY: x * 0.015,
-      rotateX: -y * 0.015,
-      duration: 0.3,
-      ease: 'power2.out',
-    })
+  // Determine card height based on position for bento effect
+  const getCardHeight = () => {
+    // Row 1: Fabrics (large), Apparel (normal), Technical Textile (normal)
+    // Row 2: Footwear (normal), Accessories (normal), Jewellery (large)
+    if (index === 0) return 'h-[400px] md:h-[450px] lg:h-[500px] md:row-span-1'
+    if (index === 5) return 'h-[400px] md:h-[450px] lg:h-[500px] md:row-span-1'
+    return 'h-[350px] md:h-[400px] lg:h-[450px]'
   }
 
   return (
     <div
       ref={cardRef}
-      className="category-card relative shrink-0 w-[85vw] md:w-[55vw] lg:w-[42vw] xl:w-[38vw] h-[55vh] md:h-[60vh] lg:h-[60vh] xl:h-[65vh] cursor-none"
-      style={{ perspective: '1200px', transformStyle: 'preserve-3d' }}
+      className={`category-card relative overflow-hidden rounded-2xl cursor-none ${getCardHeight()}`}
       onMouseEnter={handleMouseEnter}
-      onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="relative w-full h-full overflow-hidden rounded-xl bg-coz-gray">
-        {/* Image */}
+      {/* Background Image */}
+      <div className="absolute inset-0 overflow-hidden">
         <img
           ref={imageRef}
           src={category.image}
           alt={category.name}
-          className="card-image absolute inset-0 w-full h-full object-cover scale-105"
+          className="absolute inset-0 w-full h-full object-cover"
         />
+      </div>
 
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
 
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
-        {/* Content */}
-        <div
-          ref={contentRef}
-          className="absolute inset-0 flex flex-col justify-end p-6 lg:p-8"
+      {/* Content */}
+      <div
+        ref={contentRef}
+        className="absolute inset-0 flex flex-col justify-end p-6 lg:p-8"
+      >
+        {/* Category Number */}
+        <span
+          className="text-white/40 text-sm font-medium tracking-widest mb-2"
+          style={{ fontFamily: 'monospace' }}
         >
-          {/* Index */}
-          <span className="text-white/30 text-sm font-medium tracking-widest mb-3">
-            {String(index + 1).padStart(2, '0')}
-          </span>
+          {String(index + 1).padStart(2, '0')}
+        </span>
 
-          {/* Title - Fixed height for alignment */}
-          <h3 className="text-2xl lg:text-3xl font-semibold text-white mb-3 leading-tight min-h-[2.5rem] lg:min-h-[3rem]">
-            {category.name}
-          </h3>
+        {/* Category Name */}
+        <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-2 leading-tight">
+          {category.name}
+        </h3>
 
-          {/* Description - Fixed height container, shows on hover */}
-          <div className="h-[3.5rem] lg:h-[4rem] mb-3">
-            <p className={`text-sm text-white/70 leading-relaxed line-clamp-2 transition-all duration-400 ${
-              isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
-            }`}>
-              {category.description}
-            </p>
-          </div>
-
-          {/* Tags - Fixed height container, shows on hover */}
-          <div className="h-[2rem]">
-            <div className={`flex flex-wrap gap-2 transition-all duration-400 delay-75 ${
-              isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
-            }`}>
-              {category.details?.slice(0, 3).map((detail, i) => (
-                <span
-                  key={i}
-                  className="px-3 py-1 text-xs text-white/70 bg-white/10 rounded-full"
-                >
-                  {detail}
-                </span>
-              ))}
-            </div>
-          </div>
+        {/* Description - Reveals on hover */}
+        <div className={`overflow-hidden transition-all duration-500 ${
+          isHovered ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0'
+        }`}>
+          <p className="text-sm lg:text-base text-white/80 leading-relaxed pr-4">
+            {category.description}
+          </p>
         </div>
 
-        {/* Hover Border Effect */}
-        <div className={`absolute inset-0 rounded-xl border transition-all duration-400 pointer-events-none ${
-          isHovered ? 'border-white/20' : 'border-transparent'
-        }`} />
+        {/* Explore Link */}
+        <div className={`flex items-center gap-2 mt-4 transition-all duration-500 ${
+          isHovered ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
+        }`}>
+          <span className="text-sm font-medium text-white uppercase tracking-wider">
+            Explore
+          </span>
+          <svg
+            className="w-4 h-4 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </div>
+
+        {/* Corner Accent */}
+        <div
+          className={`absolute top-4 right-4 w-3 h-3 rounded-full transition-all duration-500 ${
+            isHovered ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
+          }`}
+          style={{ backgroundColor: category.color }}
+        />
       </div>
+
+      {/* Hover Border */}
+      <div
+        className={`absolute inset-0 rounded-2xl border-2 transition-all duration-500 pointer-events-none ${
+          isHovered ? 'border-white/30' : 'border-transparent'
+        }`}
+      />
     </div>
   )
 }

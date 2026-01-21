@@ -225,30 +225,33 @@ export function Hero() {
       >
         <div className="space-y-2 mb-6 lg:mb-8">
           <div ref={line1Ref} className="overflow-hidden">
-            <h1 className="text-xs sm:text-sm md:text-base lg:text-lg font-light tracking-[0.2em] text-white/70 uppercase">
+            <h1 className="text-sm sm:text-lg lg:text-xl  tracking-[0.2em] text-white font-bold uppercase">
               {renderSplitText('The Art of')}
             </h1>
           </div>
 
           <div ref={line2Ref} className="overflow-hidden">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight tracking-tight text-white uppercase mb-6 lg:mb-12 xl:mb-20">
-              <span className="block md:hidden">{renderSplitText('Textile')}</span>
-              <span className="block md:hidden">{renderSplitText('Craftsmanship')}</span>
-              <span className="hidden md:block">{renderSplitText('Textile Craftsmanship')}</span>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight tracking-tight text-white">
+              <span className="block md:hidden uppercase">{renderSplitText('Fabric')}</span>
+              <span className="block md:hidden uppercase">{renderSplitText('Fashion')}</span>
+              <span className="hidden md:block">
+                <span className="">{renderSplitText('Fabric ')}</span>
+                <span className="">{renderSplitText('To ')}</span>
+                <span className="">{renderSplitText('Fashion')}</span>
+              </span>
             </h1>
           </div>
         </div>
 
-        <div ref={descRef} className="max-w-5xl mx-auto px-4 md:px-0" style={{ opacity: 0 }}>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 font-light leading-relaxed mb-6 lg:mb-8 xl:mb-10">
-            We bridge centuries of artisanal craftsmanship with modern global markets.
+        <div ref={descRef} className="max-w-6xl mx-auto px-4 md:px-0" style={{ opacity: 0 }}>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-bold leading-relaxed mb-6 lg:mb-8 xl:mb-10">
+            We bridge centuries of artisanal craftsmanship with modern manufacturing techniques for the global markets.
             <span className="hidden sm:inline"><br /></span>
             <span className="sm:hidden"> </span>
-            From the handlooms of Varanasi to the mills of Surat, we curate India&apos;s finest
-            textiles for discerning brands worldwide.
+           
           </p>
 
-          <button
+          {/* <button
             onClick={scrollToCategories}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
@@ -267,37 +270,37 @@ export function Hero() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
             </span>
-          </button>
+          </button> */}
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="absolute bottom-0 left-0 right-0 z-30 py-4 md:py-6 container-padding">
+      {/* <div className="absolute bottom-0 left-0 right-0 z-30 py-4 md:py-6 container-padding">
         <div className="flex items-center justify-center md:justify-between text-white/40 text-[10px] md:text-xs tracking-wider uppercase">
           <span className="hidden md:block">CLUB of Lifestyle Products</span>
           <span>Scroll to Explore</span>
           <span className="hidden md:block">End-to-End Textile Supply Solutions</span>
         </div>
-      </div>
+      </div> */}
 
       {/* Side Text */}
-      <div className="absolute left-4 lg:left-6 top-1/2 -translate-y-1/2 z-30 hidden lg:block">
+      {/* <div className="absolute left-4 lg:left-6 top-1/2 -translate-y-1/2 z-30 hidden lg:block">
         <span
           className="text-[10px] lg:text-xs tracking-[0.3em] text-white/30 uppercase"
           style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
         >
           Crafted with Purpose
         </span>
-      </div>
+      </div> */}
 
-      <div className="absolute right-4 lg:right-6 top-1/2 -translate-y-1/2 z-30 hidden lg:block">
+      {/* <div className="absolute right-4 lg:right-6 top-1/2 -translate-y-1/2 z-30 hidden lg:block">
         <span
           className="text-[10px] lg:text-xs tracking-[0.3em] text-white/30 uppercase"
           style={{ writingMode: 'vertical-rl' }}
         >
           Thinking Global, Acting Local
         </span>
-      </div>
+      </div> */}
     </section>
   )
 }

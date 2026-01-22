@@ -223,9 +223,9 @@ export function Hero() {
         ref={containerRef}
         className="relative z-30 text-center container-padding max-w-7xl mx-auto"
       >
-        <div className="space-y-2 mb-6 lg:mb-8">
+        <div className="space-y-6 lg:space-y-8">
           <div ref={line1Ref} className="overflow-hidden">
-            <h1 className="text-sm sm:text-lg lg:text-xl  tracking-[0.2em] text-white font-bold uppercase">
+            <h1 className="text-sm sm:text-base md:text-lg lg:text-xl tracking-[0.2em] text-white font-bold uppercase">
               {renderSplitText('The Art of')}
             </h1>
           </div>
@@ -241,36 +241,12 @@ export function Hero() {
               </span>
             </h1>
           </div>
-        </div>
 
-        <div ref={descRef} className="max-w-6xl mx-auto px-4 md:px-0" style={{ opacity: 0 }}>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-bold leading-relaxed mb-6 lg:mb-8 xl:mb-10">
-            We bridge centuries of artisanal craftsmanship with modern manufacturing techniques for the global markets.
-            <span className="hidden sm:inline"><br /></span>
-            <span className="sm:hidden"> </span>
-           
-          </p>
-
-          {/* <button
-            onClick={scrollToCategories}
-            onMouseEnter={() => setHovering(true)}
-            onMouseLeave={() => setHovering(false)}
-            className="group inline-flex items-center gap-3 md:gap-4 text-white"
-          >
-            <span className="text-xs md:text-sm font-medium tracking-[0.15em] md:tracking-[0.2em] uppercase">
-              Discover Our World
-            </span>
-            <span className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-500">
-              <svg
-                className="w-4 h-4 md:w-5 md:h-5 group-hover:text-black transition-colors duration-500 rotate-90"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
-            </span>
-          </button> */}
+          <div ref={descRef} className="w-full text-center" style={{ opacity: 0 }}>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-bold">
+              We bridge centuries of artisanal craftsmanship with modern manufacturing techniques for the global markets.
+            </p>
+          </div>
         </div>
       </div>
 

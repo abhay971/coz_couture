@@ -44,7 +44,7 @@ export function Process() {
       <div className="section-padding container-padding">
         {/* Header */}
         <div className="text-center mb-16 lg:mb-24">
-          <span className="inline-block text-sm font-bold tracking-[0.3em] text-coz-orange uppercase mb-6">
+          <span className="inline-block text-base md:text-lg font-bold tracking-[0.3em] text-coz-orange uppercase mb-6">
             How It Works
           </span>
           <div ref={headingRef}>

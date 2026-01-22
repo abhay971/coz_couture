@@ -102,14 +102,11 @@ export function About() {
     >
       {/* Main Content */}
       <div className="section-padding container-padding">
-        {/* Centered Header */}
+        {/* Centered Main Heading */}
         <div className="text-center mb-12 lg:mb-16">
-          <span className="inline-block text-sm font-bold tracking-[0.3em] text-coz-orange uppercase mb-6">
-            CLUB of Lifestyle
-          </span>
           <div className="overflow-hidden">
-            <h2 ref={headingRef} className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight text-coz-charcoal">
-              Where Tradition Meets Tomorrow
+            <h2 ref={headingRef} className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold leading-tight tracking-tight text-coz-orange">
+              CLUB of Lifestyle
             </h2>
           </div>
         </div>
@@ -117,6 +114,13 @@ export function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-stretch">
           {/* Left - Content */}
           <div className="flex flex-col">
+            {/* Section Label */}
+            <div className="mb-6">
+              <h3 className="text-2xl md:text-3xl lg:text-3xl font-bold leading-tight tracking-tight text-coz-charcoal">
+                Where Tradition Meets Tomorrow
+              </h3>
+            </div>
+
             {/* Text Content */}
             <div ref={textRef} className="space-y-6 text-coz-gray justify-center text-justify leading-relaxed">
               <p className="text-lg">
@@ -124,13 +128,13 @@ export function About() {
                 with exceptional textile manufacturing—partnering with skilled craftsmen and
                 state-of-the-art facilities to deliver products that exceed expectations.
               </p>
-              <p>
+              <p className="text-lg">
                 We don't just source materials. We seek out the extraordinary—the master
                 weavers who have perfected their craft over generations, the innovative
                 manufacturers who blend traditional techniques with cutting-edge technology,
                 and the quality-focused facilities that set industry standards.
               </p>
-              <p>
+              <p className="text-lg">
                 Excellence isn't a destination—it's our daily pursuit. Every piece we deliver
                 carries the weight of our reputation, built on fifteen years of unwavering
                 dedication to craft, quality, and the partnerships we've nurtured along the way.

@@ -105,7 +105,7 @@ export function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-2 gap-10 lg:gap-8 xl:gap-16">
             {/* Left - Content */}
             <div className="lg:col-span-2 xl:col-span-1 lg:pr-4 xl:pr-12">
-              <span className="inline-block text-sm font-bold tracking-[0.3em] text-coz-orange uppercase mb-6">
+              <span className="inline-block text-base md:text-lg font-bold tracking-[0.3em] text-coz-orange uppercase mb-6">
                 Let&apos;s Connect
               </span>
 

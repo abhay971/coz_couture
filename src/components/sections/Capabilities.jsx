@@ -132,7 +132,7 @@ export function Capabilities() {
         <div className="container-padding">
           {/* Centered Header */}
           <div className="text-center mb-12 lg:mb-16">
-            <span className="inline-block text-sm font-bold tracking-[0.3em] text-coz-orange uppercase mb-6">
+            <span className="inline-block text-base md:text-lg font-bold tracking-[0.3em] text-coz-orange uppercase mb-6">
               Our Expertise
             </span>
             <div ref={headingRef} className="mb-6">
